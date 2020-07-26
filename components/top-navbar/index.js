@@ -3,7 +3,7 @@ export default {
         return {
             menuItems: [
                 {
-                    name: 'Color Palette',
+                    name: 'Color Swatches',
                     active: true
                 },
                 {
