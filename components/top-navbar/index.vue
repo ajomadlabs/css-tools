@@ -2,7 +2,7 @@
     <div>
         <!-- MAIN SECTION -->
         <div
-            class="w-full bg-css-tools-white shadow-md"
+            class="w-full fixed top-0 bg-css-tools-white shadow-md"
         >
             <!-- CONTENT SECTION -->
             <center>

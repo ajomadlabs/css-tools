@@ -5,7 +5,7 @@
     <!-- END -->
     <!-- COLOR PALETTE CARD SECTION -->
     <center
-      class="mt-20"
+      class="mt-32"
     >
       <div
         style="max-width: 1180px"
@@ -18,8 +18,7 @@
           <div
             v-for="(color, i) in colorPalettes"
             :key="i"
-            class="w-1/5 px-4 py-6 cursor-pointer mb-8 h-auto rounded-lg bg-css-tools-white shadow-md"
-            :class="[i > 0 ? 'ml-4' : 'ml-0']"
+            class="w-1/5 ml-4 px-4 py-6 cursor-pointer mb-8 h-auto rounded-lg bg-css-tools-white shadow-md"
           >
             <!-- FIRST ROW -->
             <div
