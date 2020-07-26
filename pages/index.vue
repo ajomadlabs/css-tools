@@ -5,14 +5,37 @@
     <!-- END -->
     <!-- COLOR PALETTE CARD SECTION -->
     <center
-      class="mt-32"
+      class="mt-34"
     >
       <div
         style="max-width: 1180px"
       >
+
+        <!-- HEADER SECTION -->
+        <div
+          class="mx-27"
+        >
+          <!-- SECTION ONE -->
+          <h1
+            class="antialiased font-semibold leading-normal tracking-normal text-24 text-left text-css-tools-black"
+          >
+            Color Swatches
+          </h1>
+          <!-- END -->
+
+          <!-- SECTION TWO -->
+          <p
+            class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+          >
+            Choose your favourite colors with ease for your next project.
+          </p>
+          <!-- END -->
+        </div>
+        <!-- END -->
+
         <!-- PALETTE CONTAINER -->
         <div
-          class="flex flex-wrap justify-center items-start"
+          class="mt-10 flex flex-wrap justify-center items-start"
         >
           <!-- PALETTE CARD -->
           <div
