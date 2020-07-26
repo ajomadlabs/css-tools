@@ -3,10 +3,12 @@ export default {
         return {
             menuItems: [
                 {
-                    name: 'Palette'
+                    name: 'Color Palette',
+                    active: true
                 },
                 {
-                    name: 'Color Converter'
+                    name: 'Color Converter',
+                    active: false
                 }
             ]
         }

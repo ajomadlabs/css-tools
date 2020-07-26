@@ -2,12 +2,12 @@
     <div>
         <!-- MAIN SECTION -->
         <div
-            class="w-full bg-css-tools-white shadow-md h-auto"
+            class="w-full bg-css-tools-white shadow-md"
         >
             <!-- CONTENT SECTION -->
             <center>
                 <div
-                    class="flex justify-between items-center py-4"
+                    class="flex justify-between items-center h-auto"
                     style="max-width: 1180px;"
                 >
 
@@ -30,8 +30,8 @@
                             >
                                 <!-- PALETTE SECTION -->
                                 <h1
-                                    class="text-left cursor-pointer font-normal antialiased leading-normal tracking-normal text-14 text-css-tools-black"
-                                    :class="i > 0 ? 'ml-8' : ''"
+                                    class="text-left py-6 cursor-pointer font-normal antialiased leading-normal tracking-normal text-14 text-css-tools-black"
+                                    :class="[i > 0 ? 'ml-8' : '', menu.active ? 'border-b-4 border-solid border-css-tools-primary' : '']"
                                 >
                                     {{ menu.name }}
                                 </h1>
