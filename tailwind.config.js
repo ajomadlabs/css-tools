@@ -631,8 +631,8 @@ module.exports = {
       '7076p': '70.76%',
       '85': '85%',
       '90': '90%',
-      full: '100%',
-      screen: '100vw',
+      'full': '100%',
+      'screen': '100vw',
       '1198': '74.87rem'
     },
     padding: {
@@ -796,7 +796,7 @@ module.exports = {
         'f8fafb': '#f8fafb'
       },
       fontFamily: {
-        sans: ["Rubik"]
+        sans: ["Poppins"]
       },
       fontWeight: {
         'cargogen-bold': '600'
