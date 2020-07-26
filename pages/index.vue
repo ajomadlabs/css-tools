@@ -16,9 +16,9 @@
         >
           <!-- PALETTE CARD -->
           <div
-            v-for="i in 18"
+            v-for="(color, i) in colorPalettes"
             :key="i"
-            class="w-1/5 px-2 py-4 cursor-pointer mb-8 h-64 rounded-lg bg-css-tools-white shadow-md"
+            class="w-1/5 px-4 py-6 cursor-pointer mb-8 h-auto rounded-lg bg-css-tools-white shadow-md"
             :class="[i > 0 ? 'ml-4' : 'ml-0']"
           >
             <!-- FIRST ROW -->
@@ -27,13 +27,15 @@
             >
               <!-- COLOR ONE -->
               <div
-                class="w-28 h-28 bg-red-300"
+                class="w-28 h-26 rounded-md"
+                :style="`background-color:${color.colorOne}`"
               />
               <!-- END -->
 
               <!-- COLOR TWO -->
               <div
-                class="w-28 h-28 bg-yellow-400"
+                class="w-28 h-26 rounded-md"
+                :style="`background-color:${color.colorTwo}`"
               />
               <!-- END -->
             </div>
@@ -45,14 +47,29 @@
             >
               <!-- COLOR THREE -->
               <div
-                class="w-28 h-28 bg-green-200"
+                class="w-28 h-26 rounded-md"
+                :style="`background-color:${color.colorThree}`"
               />
               <!-- END -->
 
               <!-- COLOR FOUR -->
               <div
-                class="w-28 h-28 bg-pink-900"
+                class="w-28 h-26 rounded-md"
+                :style="`background-color:${color.colorFour}`"
               />
+              <!-- END -->
+            </div>
+            <!-- END -->
+            <!-- THIRD ROW -->
+            <div
+              class="mt-4"
+            >
+              <!-- PALETTE NAME -->
+              <h3
+                class="antialiased font-medium leading-normal tracking-normal text-center text-16 text-css-tools-gray-dark"
+              >
+                Color Swatch #{{i + 1}}
+              </h3>
               <!-- END -->
             </div>
             <!-- END -->
