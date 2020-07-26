@@ -28,7 +28,7 @@
                                 v-for="(menu, i) in menuItems"
                                 :key="i"
                             >
-                                <!-- PALETTE SECTION -->
+                                <!-- ITEM SECTION -->
                                 <h1
                                     class="text-left py-6 cursor-pointer font-normal antialiased leading-normal tracking-normal text-14 text-css-tools-black"
                                     :class="[i > 0 ? 'ml-8' : '', menu.active ? 'border-b-4 border-solid border-css-tools-primary' : '']"
