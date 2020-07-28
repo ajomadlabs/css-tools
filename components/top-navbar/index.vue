@@ -1,13 +1,11 @@
 <template>
     <div>
         <!-- MAIN SECTION -->
-        <div
-            class="w-full bg-css-tools-white shadow-md h-auto"
-        >
-            <!-- CONTENT SECTION -->
+        <div class="w-full bg-css-tools-white shadow-md">
+        <!-- CONTENT SECTION -->
             <center>
                 <div
-                    class="flex justify-between items-center py-4"
+                    class="flex justify-between items-center"
                     style="max-width: 1180px;"
                 >
 
@@ -15,30 +13,32 @@
                     <div
                         class="flex items-baseline"
                     >
-                        <h1
-                            class="text-left font-semibold antialiased leading-normal tracking-normal text-20 text-css-tools-black"
-                        >
+                        <h1 class="text-left py-4 font-semibold antialiased leading-normal tracking-normal text-20 text-css-tools-black">
+                        
                             CSSTools.
                         </h1>
-                        <div
-                            class="flex items-center ml-6"
-                        >
-
-                            <div
-                                v-for="(menu, i) in menuItems"
-                                :key="i"
-                            >
+                        <div class="flex items-center ml-6 ">
+                         <div class="flex">
+                             <div class="ml-15">
                                 <!-- PALETTE SECTION -->
-                                <h1
-                                    class="text-left cursor-pointer font-normal antialiased leading-normal tracking-normal text-14 text-css-tools-black"
-                                    :class="i > 0 ? 'ml-8' : ''"
-                                >
-                                    {{ menu.name }}
-                                </h1>
+                                <h1 class="text-left py-4 cursor-pointer font-normal antialiased leading-normal tracking-normal text-14 text-css-tools-black border-black border-b-4">
+                                 Palette                
+                              </h1>
                                 <!-- END -->
-
                             </div>
+
+                                <div class="ml-15">
+
+                                    <!-- Converter SECTION -->
+                                    <h1 class="text-left py-4 cursor-pointer font-normal antialiased leading-normal tracking-normal text-14 text-css-tools-black ml 15">
+                                    Color Converter                           
+                                    </h1>
+                                    <!-- END -->
+                                </div>
+
                         </div>
+                        </div>
+                       
                     </div>
                     <!-- END -->
 
@@ -57,4 +57,4 @@
     </div>
 </template>
 
-<script src="./index.js"/>
+<!--script src="./index.js"/-->
