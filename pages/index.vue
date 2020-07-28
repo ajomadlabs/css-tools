@@ -51,14 +51,40 @@
               <div
                 class="w-28 h-26 rounded-md"
                 :style="`background-color:${color.colorOne}`"
-              />
+                @mouseover="setActiveColor(i, 1)"
+                @mouseleave="resetColor(i)"
+              >
+                <div
+                  v-show="color.colorOneActive"
+                  class="bg-css-tools-black opacity-50 rounded-t-lg"
+                >
+                  <h3
+                    class="text-center antialiased leading-normal tracking-normal text-css-tools-white"
+                  >
+                    {{ color.colorOne }}
+                  </h3>
+                </div>
+              </div>
               <!-- END -->
 
               <!-- COLOR TWO -->
               <div
                 class="w-28 h-26 rounded-md"
                 :style="`background-color:${color.colorTwo}`"
-              />
+                @mouseover="setActiveColor(i, 2)"
+                @mouseleave="resetColor(i)"
+              >
+                <div
+                  v-show="color.colorTwoActive"
+                  class="bg-css-tools-black opacity-50 rounded-t-lg"
+                >
+                  <h3
+                    class="text-center antialiased leading-normal tracking-normal text-css-tools-white"
+                  >
+                    {{ color.colorTwo }}
+                  </h3>
+                </div>
+              </div>
               <!-- END -->
             </div>
             <!-- END -->
@@ -71,14 +97,40 @@
               <div
                 class="w-28 h-26 rounded-md"
                 :style="`background-color:${color.colorThree}`"
-              />
+                @mouseover="setActiveColor(i, 3)"
+                @mouseleave="resetColor(i)"
+              >
+                <div
+                  v-if="color.colorThreeActive"
+                  class="bg-css-tools-black opacity-50 rounded-t-lg"
+                >
+                  <h3
+                    class="text-center antialiased leading-normal tracking-normal text-css-tools-white"
+                  >
+                    {{ color.colorThree }}
+                  </h3>
+                </div>
+              </div>
               <!-- END -->
 
               <!-- COLOR FOUR -->
               <div
                 class="w-28 h-26 rounded-md"
                 :style="`background-color:${color.colorFour}`"
-              />
+                @mouseover="setActiveColor(i, 4)"
+                @mouseleave="resetColor(i)"
+              >
+                <div
+                  v-show="color.colorFourActive"
+                  class="bg-css-tools-black opacity-50 rounded-t-lg"
+                >
+                  <h3
+                    class="text-center antialiased leading-normal tracking-normal text-css-tools-white"
+                  >
+                    {{ color.colorFour }}
+                  </h3>
+                </div>
+              </div>
               <!-- END -->
             </div>
             <!-- END -->
