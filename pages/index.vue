@@ -89,7 +89,7 @@
 
             <!-- SECOND ROW -->
             <div
-              class="flex items-center gap-2 justify-between mt-2"
+              class="flex items-center justify-between mt-2"
             >
               <!-- COLOR THREE -->
               <div
