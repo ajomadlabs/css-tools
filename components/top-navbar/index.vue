@@ -16,7 +16,8 @@
                         class="flex items-baseline"
                     >
                         <h1
-                            class="text-left font-semibold antialiased leading-normal tracking-normal text-20 text-css-tools-black"
+                            class="text-left cursor-pointer font-semibold antialiased leading-normal tracking-normal text-20 text-css-tools-black"
+                            @click="$router.push('/')"
                         >
                             CSSTools.
                         </h1>

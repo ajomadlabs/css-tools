@@ -1,8 +1,5 @@
 <template>
   <div>
-    <!-- TOP NAVBAR COMPONENT -->
-    <top-navbar/>
-    <!-- END -->
     <!-- COLOR PALETTE CARD SECTION -->
     <center
       class="mt-34"
@@ -42,10 +39,11 @@
             v-for="(color, i) in colorPalettes"
             :key="i"
             class="w-1/5 ml-4 px-4 py-6 cursor-pointer mb-8 h-auto rounded-lg bg-css-tools-white shadow-md"
+            @click="goTo(i)"
           >
             <!-- FIRST ROW -->
             <div
-              class="flex items-center gap-2 justify-between"
+              class="flex items-center justify-between"
             >
               <!-- COLOR ONE -->
               <div
@@ -69,7 +67,7 @@
 
               <!-- COLOR TWO -->
               <div
-                class="w-28 h-26 rounded-md"
+                class="w-28 h-26 rounded-md ml-2"
                 :style="`background-color:${color.colorTwo}`"
                 @mouseover="setActiveColor(i, 2)"
                 @mouseleave="resetColor(i)"
@@ -115,7 +113,7 @@
 
               <!-- COLOR FOUR -->
               <div
-                class="w-28 h-26 rounded-md"
+                class="w-28 h-26 rounded-md ml-2"
                 :style="`background-color:${color.colorFour}`"
                 @mouseover="setActiveColor(i, 4)"
                 @mouseleave="resetColor(i)"

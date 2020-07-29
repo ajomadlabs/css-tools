@@ -1,7 +1,4 @@
 export default {
-    components: {
-        topNavbar: () => import("@/components/top-navbar/index.vue")
-    },
     data () {
         return {
             colorPalettes: [
@@ -210,6 +207,15 @@ export default {
             this.$set(this.colorPalettes[index], 'colorTwoActive', false)
             this.$set(this.colorPalettes[index], 'colorThreeActive', false)
             this.$set(this.colorPalettes[index], 'colorFourActive', false)
+        },
+        /**
+         * goTO
+         * @param {Number} index
+         * Method to route to the respective
+         * swatch pages 
+        */
+        goTo (index) {
+            this.$router.push(`/color-swatch/${index + 1}`)
         }
     }
 }
