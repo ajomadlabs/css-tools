@@ -27,6 +27,37 @@
             Let this swatch be the very next one you choose for your upcoming project.
           </p>
           <!-- END -->
+
+          <!-- SECTION THREE -->
+          <div
+            class="flex flex-wrap w-full items-center mt-16"
+          >
+            <!-- COLOR SECTION -->
+            <div
+              v-for="(item, i) in colorSwatch"
+              :key="i"
+            >
+              <!-- COLOR -->
+              <div
+                class=" w-50 h-116 rounded"
+                :class="[i !== 0 ? 'ml-2' : 'ml-0']"
+                :style="`background-color:${item}`"
+              />
+              <!-- END -->
+              <!-- COLOR CODE -->
+              <div>
+                <h3
+                  class="mt-2 text-css-tools-black-900 font-medium text-16 text-center antialiased leading-normal tracking-normal text-center text-css-tools-black-900"
+                >
+                  {{ item }}
+                </h3>
+              </div>
+              <!-- END -->
+            </div>
+            <!-- END -->
+
+          </div>
+          <!-- END -->
         </div>
         <!-- END -->
       </div>

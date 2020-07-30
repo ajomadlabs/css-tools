@@ -215,6 +215,13 @@ export default {
          * swatch pages 
         */
         goTo (index) {
+            let payload = {
+                colorOne: this.colorPalettes[index].colorOne,
+                colorTwo: this.colorPalettes[index].colorTwo,
+                colorThree: this.colorPalettes[index].colorThree,
+                colorFour: this.colorPalettes[index].colorFour
+            }
+            this.$store.dispatch("swatch/SET_COLOR_SWATCH", payload)
             this.$router.push(`/color-swatch/${index + 1}`)
         }
     }

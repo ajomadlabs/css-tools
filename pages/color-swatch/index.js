@@ -1,11 +1,13 @@
 export default {
     data () {
         return {
-            swatchNumber: ''
+            swatchNumber: '',
+            colorSwatch: {}
         }
     },
     mounted () {
         this.swatchNumber = this.$route.params.swatch
+        this.colorSwatch = this.$store.state.swatch.colorSwatch
     },
     methods: {
         /**
