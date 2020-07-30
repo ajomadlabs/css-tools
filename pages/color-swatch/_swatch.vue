@@ -47,7 +47,8 @@
               <!-- COLOR CODE -->
               <div>
                 <h3
-                  class="mt-2 text-css-tools-black-900 font-medium text-16 text-center antialiased leading-normal tracking-normal text-center text-css-tools-black-900"
+                  class="mt-2 text-css-tools-black-900 font-medium text-16 text-center antialiased leading-normal tracking-normal text-center"
+                  :style="`color: ${item}`"
                 >
                   {{ item }}
                 </h3>
