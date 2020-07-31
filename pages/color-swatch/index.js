@@ -53,7 +53,7 @@ export default {
         },
         /**
          * generateLightShades
-         * @para {String} color
+         * @param {String} color
          * Method which generates lighter
          * shades of the color
         */
@@ -68,7 +68,7 @@ export default {
         },
         /**
          * generateDarkShades
-         * @para {String} color
+         * @param {String} color
          * Method which generates darker
          * shades of the color
         */
@@ -83,7 +83,7 @@ export default {
         },
         /**
          * generateTriads
-         * @para {String} color
+         * @param {String} color
          * Method which generates triad
          * of a particular color
         */
@@ -101,7 +101,7 @@ export default {
         },
         /**
          * generateTetrad
-         * @para {String} color
+         * @param {String} color
          * Method which generates tetrad
          * of a particular color
         */
@@ -119,7 +119,7 @@ export default {
         },
         /**
          * generateAnalogous
-         * @para {String} color
+         * @param {String} color
          * Method which generates analogous
          * of a particular color
         */
@@ -137,7 +137,7 @@ export default {
         },
         /**
          * generateMonochromatic
-         * @para {String} color
+         * @param {String} color
          * Method which generates monochromatic
          * of a particular color
         */
@@ -155,7 +155,7 @@ export default {
         },
         /**
          * generateSplitComplement
-         * @para {String} color
+         * @param {String} color
          * Method which generates split complement
          * of a particular color
         */
