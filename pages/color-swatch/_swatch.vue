@@ -260,6 +260,52 @@
               </div>
             </div>
             <!-- END -->
+            <!-- TETRAD -->
+            <div
+              class="mt-10"
+            >
+              <!-- HEADER SECTION -->
+              <h1
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+              >
+                Tetrad
+              </h1>
+              <!-- END -->
+              <!-- SUB HEADER SECTION -->
+              <p
+                class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+              >
+                All four colors are distributed evenly around the color wheel, causing no clear dominance of one color.
+              </p>
+              <!-- END -->
+              <!-- TRIADS COLOR SECTIONS -->
+              <div
+                class="mt-6 flex flex-wrap w-full"
+              >
+                <!-- COLOR SECTION -->
+                <div
+                  v-for="(color, i) in tetrads"
+                  :key="i"
+                >
+                  <!-- COLOR -->
+                  <div
+                    class="w-16 h-16 shadow mb-2 ml-2 rounded"
+                    :style="`background-color:${color.name}`"
+                  />
+                  <!-- END -->
+                  <!-- COLOR CODE -->
+                  <div>
+                    <h3
+                      class="mt-2 ml-2 text-css-tools-black text-css-tools-black-900 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
+                    >
+                      {{ color.name }}
+                    </h3>
+                  </div>
+                  <!-- END -->
+                </div>
+              </div>
+            </div>
+            <!-- END -->
           </div>
           <!-- END -->
         </div>

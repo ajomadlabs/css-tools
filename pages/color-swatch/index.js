@@ -11,7 +11,8 @@ export default {
             colorTitle: '',
             lightShades: [],
             darkShades: [],
-            triads: []
+            triads: [],
+            tetrads: []
         }
     },
     mounted () {
@@ -78,10 +79,10 @@ export default {
             }
         },
         /**
-         * generateDarkShades
+         * generateTriads
          * @para {String} color
-         * Method which generates darker
-         * shades of the color
+         * Method which generates triad
+         * of a particular color
         */
         generateTriads (color) {
             this.triads = []
@@ -91,6 +92,24 @@ export default {
             })
             for (let i = 0; i < temp.length; i++) {
                 this.triads.push({
+                    name: temp[i].toHexString()
+                })
+            }
+        },
+        /**
+         * generateTetrad
+         * @para {String} color
+         * Method which generates tetrad
+         * of a particular color
+        */
+        generateTetrad (color) {
+            this.tetrads = []
+            let temp = this.$tinycolor(color).tetrad()
+            temp.map((t) => {
+                return t
+            })
+            for (let i = 0; i < temp.length; i++) {
+                this.tetrads.push({
                     name: temp[i].toHexString()
                 })
             }
@@ -106,6 +125,7 @@ export default {
             this.generateLightShades(color)
             this.generateDarkShades(color)
             this.generateTriads(color)
+            this.generateTetrad(color)
         }
     }
 }
