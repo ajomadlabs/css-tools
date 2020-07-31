@@ -214,6 +214,144 @@
               </div>
             </div>
             <!-- END -->
+            <!-- ANALOGOUS -->
+            <div
+              class="mt-10"
+            >
+              <!-- HEADER SECTION -->
+              <h1
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+              >
+                Analogous
+              </h1>
+              <!-- END -->
+              <!-- SUB HEADER SECTION -->
+              <p
+                class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+              >
+                Groups of three colours that are next to each other on the colour wheel.
+              </p>
+              <!-- END -->
+              <!-- ANALOGOUS COLOR SECTIONS -->
+              <div
+                class="mt-6 flex flex-wrap w-full"
+              >
+                <!-- COLOR SECTION -->
+                <div
+                  v-for="(color, i) in analogous"
+                  :key="i"
+                >
+                  <!-- COLOR -->
+                  <div
+                    class="w-16 h-16 shadow mb-2 ml-2 rounded"
+                    :style="`background-color:${color.name}`"
+                  />
+                  <!-- END -->
+                  <!-- COLOR CODE -->
+                  <div>
+                    <h3
+                      class="mt-2 ml-2 text-css-tools-black text-css-tools-black-900 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
+                    >
+                      {{ color.name }}
+                    </h3>
+                  </div>
+                  <!-- END -->
+                </div>
+              </div>
+            </div>
+            <!-- END -->
+            <!-- MONOCHROMATIC -->
+            <div
+              class="mt-10"
+            >
+              <!-- HEADER SECTION -->
+              <h1
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+              >
+                Monochromatic
+              </h1>
+              <!-- END -->
+              <!-- SUB HEADER SECTION -->
+              <p
+                class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+              >
+                Color schemes are derived from a single base hue and extended using its shades, tones and tints.
+              </p>
+              <!-- END -->
+              <!-- MONOCHROMATIC COLOR SECTIONS -->
+              <div
+                class="mt-6 flex flex-wrap w-full"
+              >
+                <!-- COLOR SECTION -->
+                <div
+                  v-for="(color, i) in monochromatic"
+                  :key="i"
+                >
+                  <!-- COLOR -->
+                  <div
+                    class="w-16 h-16 shadow mb-2 ml-2 rounded"
+                    :style="`background-color:${color.name}`"
+                  />
+                  <!-- END -->
+                  <!-- COLOR CODE -->
+                  <div>
+                    <h3
+                      class="mt-2 ml-2 text-css-tools-black text-css-tools-black-900 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
+                    >
+                      {{ color.name }}
+                    </h3>
+                  </div>
+                  <!-- END -->
+                </div>
+              </div>
+            </div>
+            <!-- END -->
+            <!-- SPLIT COMPLEMENT -->
+            <div
+              class="mt-10"
+            >
+              <!-- HEADER SECTION -->
+              <h1
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+              >
+                Split Complement
+              </h1>
+              <!-- END -->
+              <!-- SUB HEADER SECTION -->
+              <p
+                class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+              >
+                Color scheme using one base color and two secondary colors.
+              </p>
+              <!-- END -->
+              <!-- SPLIT COMPLEMENT COLOR SECTIONS -->
+              <div
+                class="mt-6 flex flex-wrap w-full"
+              >
+                <!-- COLOR SECTION -->
+                <div
+                  v-for="(color, i) in splitComplement"
+                  :key="i"
+                >
+                  <!-- COLOR -->
+                  <div
+                    class="w-16 h-16 shadow mb-2 ml-2 rounded"
+                    :style="`background-color:${color.name}`"
+                  />
+                  <!-- END -->
+                  <!-- COLOR CODE -->
+                  <div>
+                    <h3
+                      class="mt-2 ml-2 text-css-tools-black text-css-tools-black-900 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
+                    >
+                      {{ color.name }}
+                    </h3>
+                  </div>
+                  <!-- END -->
+                </div>
+              </div>
+            </div>
+            <!-- END -->
             <!-- TRIADS -->
             <div
               class="mt-10"

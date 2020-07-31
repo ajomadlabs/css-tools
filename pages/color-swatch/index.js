@@ -12,7 +12,10 @@ export default {
             lightShades: [],
             darkShades: [],
             triads: [],
-            tetrads: []
+            tetrads: [],
+            analogous: [],
+            monochromatic: [],
+            splitComplement: []
         }
     },
     mounted () {
@@ -115,6 +118,60 @@ export default {
             }
         },
         /**
+         * generateAnalogous
+         * @para {String} color
+         * Method which generates analogous
+         * of a particular color
+        */
+        generateAnalogous (color) {
+            this.analogous = []
+            let temp = this.$tinycolor(color).analogous()
+            temp.map((t) => {
+                return t
+            })
+            for (let i = 0; i < temp.length; i++) {
+                this.analogous.push({
+                    name: temp[i].toHexString()
+                })
+            }
+        },
+        /**
+         * generateMonochromatic
+         * @para {String} color
+         * Method which generates monochromatic
+         * of a particular color
+        */
+        generateMonochromatic (color) {
+            this.monochromatic = []
+            let temp = this.$tinycolor(color).monochromatic()
+            temp.map((t) => {
+                return t
+            })
+            for (let i = 0; i < temp.length; i++) {
+                this.monochromatic.push({
+                    name: temp[i].toHexString()
+                })
+            }
+        },
+        /**
+         * generateSplitComplement
+         * @para {String} color
+         * Method which generates split complement
+         * of a particular color
+        */
+        generateSplitComplement (color) {
+            this.splitComplement = []
+            let temp = this.$tinycolor(color).splitcomplement()
+            temp.map((t) => {
+                return t
+            })
+            for (let i = 0; i < temp.length; i++) {
+                this.splitComplement.push({
+                    name: temp[i].toHexString()
+                })
+            }
+        },
+        /**
          * viewColorInfo
          * @param {String} color
          * Method to view all the information
@@ -126,6 +183,9 @@ export default {
             this.generateDarkShades(color)
             this.generateTriads(color)
             this.generateTetrad(color)
+            this.generateAnalogous(color)
+            this.generateMonochromatic(color)
+            this.generateSplitComplement(color)
         }
     }
 }
