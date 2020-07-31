@@ -59,6 +59,28 @@
 
           </div>
           <!-- END -->
+
+          <!-- SECTION FOUR -->
+          <div
+            class="my-20"
+          >
+            <!-- HEADER SECTION -->
+            <h1
+              class="antialiased font-semibold leading-normal tracking-normal text-24 text-left text-css-tools-black"
+            >
+              More Details
+            </h1>
+            <!-- END -->
+
+            <!-- SUB HEADER SECTION -->
+            <p
+              class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+            >
+              An in-depth overview of this color swatch which mainly includes light, dark etc
+            </p>
+            <!-- END -->
+          </div>
+          <!-- END -->
         </div>
         <!-- END -->
       </div>
