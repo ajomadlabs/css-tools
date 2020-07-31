@@ -15,7 +15,9 @@ export default {
             tetrads: [],
             analogous: [],
             monochromatic: [],
-            splitComplement: []
+            splitComplement: [],
+            desaturate: [],
+            saturate: []
         }
     },
     mounted () {
@@ -77,6 +79,36 @@ export default {
             for (let i = 0; i < 100; i++) {
                 this.darkShades.push({
                     name: this.$tinycolor(color).darken(i).toString()
+                })
+                i = i + 10
+            }
+        },
+        /**
+         * generateDesaturate
+         * @param {String} color
+         * Method which generates desaturate
+         * shades of the color
+        */
+        generateDesaturate (color) {
+            this.desaturate = []
+            for (let i = 0; i < 100; i++) {
+                this.desaturate.push({
+                    name: this.$tinycolor(color).desaturate(i).toString()
+                })
+                i = i + 10
+            }
+        },
+        /**
+         * generateDesaturate
+         * @param {String} color
+         * Method which generates desaturate
+         * shades of the color
+        */
+        generateSaturate (color) {
+            this.saturate = []
+            for (let i = 0; i < 100; i++) {
+                this.saturate.push({
+                    name: this.$tinycolor(color).saturate(i).toString()
                 })
                 i = i + 10
             }
@@ -186,6 +218,8 @@ export default {
             this.generateAnalogous(color)
             this.generateMonochromatic(color)
             this.generateSplitComplement(color)
+            this.generateDesaturate(color)
+            this.generateSaturate(color)
         }
     }
 }
