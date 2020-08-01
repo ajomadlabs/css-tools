@@ -2,7 +2,7 @@
   <div>
     <!-- COLOR PALETTE CARD SECTION -->
     <center
-      class="mt-34"
+      class="xs:mt-28 md:mt-34"
     >
       <div
         style="max-width: 1180px"
@@ -10,11 +10,11 @@
 
         <!-- HEADER SECTION -->
         <div
-          class="mx-27"
+          class="xs:mx-8 md:mx-16 ipadPro:mx-20 lg:mx-27"
         >
           <!-- SECTION ONE -->
           <h1
-            class="antialiased font-semibold leading-normal tracking-normal text-24 text-left text-css-tools-black"
+            class="antialiased font-semibold leading-normal tracking-normal xs:text-18 md:text-24 text-left text-css-tools-black"
           >
             Color Swatches
           </h1>
@@ -38,7 +38,7 @@
           <div
             v-for="(color, i) in colorPalettes"
             :key="i"
-            class="w-1/5 ml-4 px-4 py-6 cursor-pointer mb-8 h-auto rounded-lg bg-css-tools-white shadow-md"
+            class="xs:w-5/12 md:w-1/5 xs:ml-2 md:ml-4 px-4 py-6 cursor-pointer mb-8 h-auto rounded-lg bg-css-tools-white shadow-md"
             @click="goTo(i)"
           >
             <!-- FIRST ROW -->
@@ -47,7 +47,7 @@
             >
               <!-- COLOR ONE -->
               <div
-                class="w-28 h-26 rounded-md"
+                class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md"
                 :style="`background-color:${color.colorOne}`"
                 @mouseover="setActiveColor(i, 1)"
                 @mouseleave="resetColor(i)"
@@ -67,7 +67,7 @@
 
               <!-- COLOR TWO -->
               <div
-                class="w-28 h-26 rounded-md ml-2"
+                class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md ml-2"
                 :style="`background-color:${color.colorTwo}`"
                 @mouseover="setActiveColor(i, 2)"
                 @mouseleave="resetColor(i)"
@@ -93,7 +93,7 @@
             >
               <!-- COLOR THREE -->
               <div
-                class="w-28 h-26 rounded-md"
+                class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md"
                 :style="`background-color:${color.colorThree}`"
                 @mouseover="setActiveColor(i, 3)"
                 @mouseleave="resetColor(i)"
@@ -113,7 +113,7 @@
 
               <!-- COLOR FOUR -->
               <div
-                class="w-28 h-26 rounded-md ml-2"
+                class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md ml-2"
                 :style="`background-color:${color.colorFour}`"
                 @mouseover="setActiveColor(i, 4)"
                 @mouseleave="resetColor(i)"
@@ -138,9 +138,9 @@
             >
               <!-- PALETTE NAME -->
               <h3
-                class="antialiased font-medium leading-normal tracking-normal text-center text-16 text-css-tools-gray-dark"
+                class="antialiased font-medium leading-normal tracking-normal text-center xs:text-12 md:text-16 text-css-tools-gray-dark"
               >
-                Color Swatch #{{i + 1}}
+                Color Swatch <br> #{{i + 1}}
               </h3>
               <!-- END -->
             </div>
