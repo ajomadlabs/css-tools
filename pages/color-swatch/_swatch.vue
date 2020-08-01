@@ -10,7 +10,7 @@
 
         <!-- HEADER SECTION -->
         <div
-          class="mx-27"
+          class="xs:mx-6 md:mx-27"
         >
           <!-- SECTION ONE -->
           <h1
@@ -30,7 +30,7 @@
 
           <!-- SECTION THREE -->
           <div
-            class="flex flex-wrap w-full items-center mt-16"
+            class="md:flex md:flex-wrap w-full items-center mt-16"
           >
             <!-- COLOR SECTION -->
             <div
@@ -39,8 +39,8 @@
             >
               <!-- COLOR -->
               <div
-                class=" w-50 h-116 rounded cursor-pointer"
-                :class="[i !== 0 ? 'ml-2' : 'ml-0']"
+                class="xs:w-full xs:h-64 md:w-50 md:h-116 rounded cursor-pointer"
+                :class="[i !== 0 ? 'md:ml-2' : 'ml-0']"
                 :style="`background-color:${item}`"
                 @mouseover="viewColorInfo(item)"
               />
