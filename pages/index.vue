@@ -6,8 +6,10 @@
         <div>
             <center>
                 <div style="maxWidth:1180px">
+
                     <div class="ml-10 mt-6 text-left text-20 font-extrabold">
                         <h1> Color Swatches </h1>
+                        
                     </div>  
                     <div class="ml-10 mt-1 text-left text-15 font-normal">
                         <p>Choose your favourite colors with ease for your next project</p>
@@ -16,38 +18,77 @@
                     <div class="flex flex-wrap justify-start">
                         <div class="mt-10 w-auto shadow-lg h-auto ml-10"
                             v-for="(info, i) in cardInfo" :key="i"
+                           
                         >
-                        <div class="font-light border-solid border-grey border rounded">
-                            <h1 class="px-2 py-2"> Color Swatch #{{i+1}}  </h1> 
+                        <div class="font-light border-grey border-b-4">
+                               
+                         <p> <NuxtLink :to ="'/swatch/' + (i+1)">
+                              <h1 class="px-2 py-2"> Color Swatch #{{i+1}}  </h1>
+                            </NuxtLink>
+                         </p>
+                            
+                            
                         </div>
                         
                                 <div class="flex gap-2 mt-2 py-4 px-4">
-                                    
-                                    <div class="h-15 w-15 rounded-full "
-                                        :style="`background-color:${info.colorOne}`"/>
-                                        
-                                    
-                                    <div class="h-15 w-15 rounded-full"
-                                        :style="`background-color:${info.colorTwo}`"
-                                    />
+                                
+                                            <div>
+                                            
+                                                <div    class="h-15 w-15 rounded-08"
+                                                        :style="`background-color:${info.colorOne}`"
+                                                        @mouseover="setActiveColor(i,1)" 
+                                                        @mouseleave="rColorIndex(i)">
+
+                                                    <div class="border-solid border  rounded bg-css-tools-white text-12  text-css-tools-black-900" v-show="info.colorOneActive">{{ info.colorOne }}</div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="h-15 w-15 rounded-08"
+                                                :style="`background-color:${info.colorTwo}`"
+                                                @mouseover="setActiveColor(i,2)" 
+                                                @mouseleave="rColorIndex(i)">
+                                                
+                                                <div class="border-solid border  rounded bg-css-tools-white text-12  text-css-tools-black-900" v-show="info.colorTwoActive">{{ info.colorTwo }}</div>
+                                            </div>
+
+                                                                                <div class="h-15 w-15 rounded-08"
+                                            :style="`background-color:${info.colorThree}`"
+                                            @mouseover="setActiveColor(i,3)" 
+                                            @mouseleave="rColorIndex(i)">   
+
+                                            <div class="border-solid border   rounded bg-css-tools-white text-12 text-css-tools-black-900" v-show="info.colorThreeActive">{{ info.colorThree }}</div>                                    
+                                    </div>
                                 </div>
                                 <div class="flex gap-2 mt-2 py-4 px-4">                           
-                                    <div class="h-15 w-15 rounded-full"
-                                        :style="`background-color:${info.colorThree}`"
-                                    />
-                                    <div class="h-15 w-15 rounded-full"
-                                        :style="`background-color:${info.colorFour}`"
-                                    />
-                                </div>
-                                <div class="flex gap-2 mt-2 py-4 px-4">                           
-                                    <div class="h-15 w-15 rounded-full"
+
+                                    <div class="h-15 w-15 rounded-08"
+                                            :style="`background-color:${info.colorFour}`"
+                                            @mouseover="setActiveColor(i,4)" 
+                                            @mouseleave="rColorIndex(i)">   
+
+                                            <div class="border-solid border   rounded bg-css-tools-white text-12  text-css-tools-black-900" v-show="info.colorFourActive">{{ info.colorFour}}</div>
+                                    </div>
+
+                                     <div class="h-15 w-15 rounded-08"
                                         :style="`background-color:${info.colorFive}`"
-                                    />
-                                    <div class="h-15 w-15 rounded-full"
+                                         @mouseover="setActiveColor(i,5)" 
+                                         @mouseleave="rColorIndex(i)">
+
+                                         <div class="border-solid border   rounded bg-css-tools-white text-12  text-css-tools-black-900" v-show="info.colorFiveActive">{{ info.colorFive}}</div>
+                                    </div>
+
+                                     <div class="h-15 w-15 rounded-08"
                                         :style="`background-color:${info.colorSix}`"
-                                    />
+                                         @mouseover="setActiveColor(i,6)" 
+                                         @mouseleave="rColorIndex(i)">
+
+                                         <div class="border-solid border   rounded bg-css-tools-white text-12  text-css-tools-black-900" v-show="info.colorSixActive">{{ info.colorSix}}</div>
+                                    </div>
+                                    
                                 </div>
-                            
+
+                                
                         </div>
                         
                     </div>
@@ -57,4 +98,5 @@
  </div>
 </template>
 
-<script src="./index.js" />
+<script src="./index.js"/>
+

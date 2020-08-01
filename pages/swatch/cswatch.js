@@ -1,8 +1,4 @@
-
-export default {
-    head: {
-        title: 'Home'
-      },
+export default{
     components: {
         topNavbar: () => import("@/components/top-navbar/index.vue")
     },
@@ -315,3 +311,4 @@ export default {
     
 }
 }
+

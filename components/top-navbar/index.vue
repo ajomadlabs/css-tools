@@ -13,9 +13,9 @@
                     <div
                         class="flex items-baseline"
                     >
-                        <h1 class="text-left py-4 font-semibold antialiased leading-normal tracking-normal text-20 text-css-tools-black">
+                        <h1 class="text-left xs:px-4 py-4 font-semibold antialiased leading-normal tracking-normal text-20 text-css-tools-black">
                         
-                            CSSTools.
+                            CSSTools
                         </h1>
                         <div class="flex items-center ml-6 ">
                          <div class="flex">
@@ -27,14 +27,7 @@
                                 <!-- END -->
                             </div>
 
-                                <div class="ml-15">
 
-                                    <!-- Converter SECTION -->
-                                    <h1 class="text-left py-4 cursor-pointer font-normal antialiased leading-normal tracking-normal text-14 text-css-tools-black ml 15">
-                                    Color Converter                           
-                                    </h1>
-                                    <!-- END -->
-                                </div>
 
                         </div>
                         </div>
