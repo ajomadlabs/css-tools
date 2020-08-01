@@ -36,6 +36,10 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    {
+      src: '~/plugins/tiny-color.js',
+      ssr: false
+    }
   ],
   /*
   ** Auto import components
@@ -52,9 +56,7 @@ export default {
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    '@nuxtjs/pwa',
-  ],
+  modules: [],
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/

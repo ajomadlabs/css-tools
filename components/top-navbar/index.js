@@ -2,12 +2,14 @@ export default {
     data () {
         return {
             menuItems: [
-                {
-                    name: 'Palette'
-                },
-                {
-                    name: 'Color Converter'
-                }
+                // {
+                //     name: 'Color Swatches',
+                //     active: true
+                // },
+                // {
+                //     name: 'Color Converter',
+                //     active: false
+                // }
             ]
         }
     }
