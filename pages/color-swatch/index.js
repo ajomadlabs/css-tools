@@ -23,7 +23,11 @@ export default {
     mounted () {
         this.swatchNumber = this.$route.params.swatch
         this.colorSwatch = this.$store.state.swatch.colorSwatch
-        this.viewColorInfo(this.colorSwatch.colorOne)
+        if (this.colorSwatch == null ) {
+            this.$router.push('/')
+        } else {
+            this.viewColorInfo(this.colorSwatch.colorOne)
+        }
     },
     methods: {
         /**
