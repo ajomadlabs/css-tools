@@ -4,7 +4,17 @@ export default {
     },
     data () {
         return {
-            showModal: false
+            showModal: false,
+            color: {
+                color_one: '#dbdfea',
+                color_two: '#dbdfea',
+                color_three: '#dbdfea',
+                color_four: '#dbdfea',
+                color_one_active: true,
+                color_two_active: true,
+                color_three_active: true,
+                color_four_active: true
+            }
         }
     },
     mounted () {
