@@ -2,168 +2,23 @@
 import Vue from 'vue'
 const state = () => ({
   colorSwatch: null,
-  colorPalettes: 
-  [
-    {
-        colorOne: '#383e56',
-        colorTwo: '#f69e7b',
-        colorThree: '#eedad1',
-        colorFour: '#d4d5b0',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#e4e3e3',
-        colorTwo: '#8489ac',
-        colorThree: '#3b6978',
-        colorFour: '#204051',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#ffdbc5',
-        colorTwo: '#cf1b1b',
-        colorThree: '#900d0d',
-        colorFour: '#423144',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#383e56',
-        colorTwo: '#f69e7b',
-        colorThree: '#eedad1',
-        colorFour: '#d4d5b0',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#ebecf1',
-        colorTwo: '#206a5d',
-        colorThree: '#1f4068',
-        colorFour: '#1b1c25',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#1b262c',
-        colorTwo: '#0f4c75',
-        colorThree: '#3282b8',
-        colorFour: '#bbe1fa',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#111d5e',
-        colorTwo: '#c70039',
-        colorThree: '#f37121',
-        colorFour: '#ffbd69',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#f4f6ff',
-        colorTwo: '#fbd46d',
-        colorThree: '#4f8a8b',
-        colorFour: '#07031a',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#092532',
-        colorTwo: '#89c9b8',
-        colorThree: '#c7e2b2',
-        colorFour: '#e1ffc2',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#333a7b',
-        colorTwo: '#4b6982',
-        colorThree: '#70c6c7',
-        colorFour: '#b4ffd8',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#086972',
-        colorTwo: '#01a9b4',
-        colorThree: '#87dfd6',
-        colorFour: '#fbfd8a',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#184d47',
-        colorTwo: '#96bb7c',
-        colorThree: '#d6efc7',
-        colorFour: '#eebb4d',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#fa1616',
-        colorTwo: '#12cad6',
-        colorThree: '#0fabbc',
-        colorFour: '#e4f9ff',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#1b262c',
-        colorTwo: '#0f4c75',
-        colorThree: '#3282b8',
-        colorFour: '#bbe1fa',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#24a19c',
-        colorTwo: '#6ebfb5',
-        colorThree: '#ffc7c7',
-        colorFour: '#ff5f40',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#eeecda',
-        colorTwo: '#f08a5d',
-        colorThree: '#b83b5e',
-        colorFour: '#6a2c70',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    }
+  colorPalettes: [
+    {color_one: "#383e56", color_two: "#f69e7b", color_three: "#eedad1", color_four: "#d4d5b0"},
+    {color_one: "#e4e3e3", color_two: "#8489ac", color_three: "#3b6978", color_four: "#204051"},
+    {color_one: "#ffdbc5", color_two: "#cf1b1b", color_three: "#900d0d", color_four: "#423144"},
+    {color_one: "#383e56", color_two: "#f69e7b", color_three: "#eedad1", color_four: "#d4d5b0"},
+    {color_one: "#ebecf1", color_two: "#206a5d", color_three: "#1f4068", color_four: "#1b1c25"},
+    {color_one: "#1b262c", color_two: "#0f4c75", color_three: "#3282b8", color_four: "#bbe1fa"},
+    {color_one: "#111d5e", color_two: "#c70039", color_three: "#f37121", color_four: "#ffbd69"},
+    {color_one: "#f4f6ff", color_two: "#fbd46d", color_three: "#4f8a8b", color_four: "#07031a"},
+    {color_one: "#092532", color_two: "#89c9b8", color_three: "#c7e2b2", color_four: "#e1ffc2"},
+    {color_one: "#333a7b", color_two: "#4b6982", color_three: "#70c6c7", color_four: "#b4ffd8"},
+    {color_one: "#086972", color_two: "#01a9b4", color_three: "#87dfd6", color_four: "#fbfd8a"},
+    {color_one: "#184d47", color_two: "#96bb7c", color_three: "#d6efc7", color_four: "#eebb4d"},
+    {color_one: "#fa1616", color_two: "#12cad6", color_three: "#0fabbc", color_four: "#e4f9ff"},
+    {color_one: "#1b262c", color_two: "#0f4c75", color_three: "#3282b8", color_four: "#bbe1fa"},
+    {color_one: "#24a19c", color_two: "#6ebfb5", color_three: "#ffc7c7", color_four: "#ff5f40"},
+    {color_one: "#eeecda", color_two: "#f08a5d", color_three: "#b83b5e", color_four: "#6a2c70"}
   ]
 })
 
@@ -173,32 +28,32 @@ const mutations = {
     state.colorSwatch = payload
   },
   RESET_ACTIVE_COLOR (state, payload) {
-    Vue.set(state.colorPalettes[payload.index], 'colorOneActive', false)
-    Vue.set(state.colorPalettes[payload.index], 'colorTwoActive', false)
-    Vue.set(state.colorPalettes[payload.index], 'colorThreeActive', false)
-    Vue.set(state.colorPalettes[payload.index], 'colorFourActive', false)
+    Vue.set(state.colorPalettes[payload.index], 'color_one_active', false)
+    Vue.set(state.colorPalettes[payload.index], 'color_two_active', false)
+    Vue.set(state.colorPalettes[payload.index], 'color_three_active', false)
+    Vue.set(state.colorPalettes[payload.index], 'color_four_active', false)
   },
   SET_ACTIVE_COLOR (state, payload) {
     if (payload.swatch === 1) {
-      Vue.set(state.colorPalettes[payload.index], 'colorOneActive', true)
-      Vue.set(state.colorPalettes[payload.index], 'colorTwoActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorThreeActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorFourActive', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_one_active', true)
+      Vue.set(state.colorPalettes[payload.index], 'color_two_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_three_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_four_active', false)
     } else if (payload.swatch === 2) {
-      Vue.set(state.colorPalettes[payload.index], 'colorOneActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorTwoActive', true)
-      Vue.set(state.colorPalettes[payload.index], 'colorThreeActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorFourActive', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_one_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_two_active', true)
+      Vue.set(state.colorPalettes[payload.index], 'color_three_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_four_active', false)
     } else if (payload.swatch === 3) {
-      Vue.set(state.colorPalettes[payload.index], 'colorOneActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorTwoActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorThreeActive', true)
+      Vue.set(state.colorPalettes[payload.index], 'color_one_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_two_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_three_active', true)
       Vue.set(state.colorPalettes[payload.index], 'colorFourActive', false)
     } else if (payload.swatch === 4) {
-      Vue.set(state.colorPalettes[payload.index], 'colorOneActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorTwoActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorThreeActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorFourActive', true)
+      Vue.set(state.colorPalettes[payload.index], 'color_one_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_two_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_three_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_four_active', true)
     }
   }
 }

@@ -26,7 +26,7 @@ export default {
         if (this.colorSwatch == null ) {
             this.$router.push('/')
         } else {
-            this.viewColorInfo(this.colorSwatch.colorOne)
+            this.viewColorInfo(this.colorSwatch.color_one)
         }
     },
     methods: {
@@ -37,10 +37,10 @@ export default {
          * states of the color
         */
         resetColor (index) {
-            this.$set(this.colorPalettes[index], 'colorOneActive', false)
-            this.$set(this.colorPalettes[index], 'colorTwoActive', false)
-            this.$set(this.colorPalettes[index], 'colorThreeActive', false)
-            this.$set(this.colorPalettes[index], 'colorFourActive', false)
+            this.$set(this.colorPalettes[index], 'color_one_active', false)
+            this.$set(this.colorPalettes[index], 'color_two_active', false)
+            this.$set(this.colorPalettes[index], 'color_three_active', false)
+            this.$set(this.colorPalettes[index], 'color_four_active', false)
         },
         /**
          * colorDetails

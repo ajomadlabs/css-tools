@@ -48,18 +48,18 @@
               <!-- COLOR ONE -->
               <div
                 class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md"
-                :style="`background-color:${color.colorOne}`"
+                :style="`background-color:${color.color_one}`"
                 @mouseover="setActiveColor(i, 1)"
                 @mouseleave="resetColor(i)"
               >
                 <div
-                  v-show="color.colorOneActive"
+                  v-show="color.color_one_active"
                   class="bg-css-tools-black opacity-50 rounded-t-lg"
                 >
                   <h3
                     class="text-center antialiased leading-normal tracking-normal text-css-tools-white"
                   >
-                    {{ color.colorOne }}
+                    {{ color.color_one }}
                   </h3>
                 </div>
               </div>
@@ -68,18 +68,18 @@
               <!-- COLOR TWO -->
               <div
                 class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md ml-2"
-                :style="`background-color:${color.colorTwo}`"
+                :style="`background-color:${color.color_two}`"
                 @mouseover="setActiveColor(i, 2)"
                 @mouseleave="resetColor(i)"
               >
                 <div
-                  v-show="color.colorTwoActive"
+                  v-show="color.color_two_active"
                   class="bg-css-tools-black opacity-50 rounded-t-lg"
                 >
                   <h3
                     class="text-center antialiased leading-normal tracking-normal text-css-tools-white"
                   >
-                    {{ color.colorTwo }}
+                    {{ color.color_two }}
                   </h3>
                 </div>
               </div>
@@ -94,18 +94,18 @@
               <!-- COLOR THREE -->
               <div
                 class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md"
-                :style="`background-color:${color.colorThree}`"
+                :style="`background-color:${color.color_three}`"
                 @mouseover="setActiveColor(i, 3)"
                 @mouseleave="resetColor(i)"
               >
                 <div
-                  v-if="color.colorThreeActive"
+                  v-if="color.color_three_active"
                   class="bg-css-tools-black opacity-50 rounded-t-lg"
                 >
                   <h3
                     class="text-center antialiased leading-normal tracking-normal text-css-tools-white"
                   >
-                    {{ color.colorThree }}
+                    {{ color.color_three }}
                   </h3>
                 </div>
               </div>
@@ -114,18 +114,18 @@
               <!-- COLOR FOUR -->
               <div
                 class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md ml-2"
-                :style="`background-color:${color.colorFour}`"
+                :style="`background-color:${color.color_four}`"
                 @mouseover="setActiveColor(i, 4)"
                 @mouseleave="resetColor(i)"
               >
                 <div
-                  v-show="color.colorFourActive"
+                  v-show="color.color_four_active"
                   class="bg-css-tools-black opacity-50 rounded-t-lg"
                 >
                   <h3
                     class="text-center antialiased leading-normal tracking-normal text-css-tools-white"
                   >
-                    {{ color.colorFour }}
+                    {{ color.color_four }}
                   </h3>
                 </div>
               </div>

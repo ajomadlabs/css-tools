@@ -42,10 +42,10 @@ export default {
         */
         goTo (index) {
             let payload = {
-                colorOne: this.colorPalettes[index].colorOne,
-                colorTwo: this.colorPalettes[index].colorTwo,
-                colorThree: this.colorPalettes[index].colorThree,
-                colorFour: this.colorPalettes[index].colorFour
+                colorOne: this.colorPalettes[index].color_one,
+                colorTwo: this.colorPalettes[index].color_two,
+                colorThree: this.colorPalettes[index].color_three,
+                colorFour: this.colorPalettes[index].color_four
             }
             this.$store.dispatch("swatch/SET_COLOR_SWATCH", payload)
             this.$router.push(`/color-swatch/${index + 1}`)
