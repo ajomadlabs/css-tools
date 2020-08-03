@@ -27,6 +27,9 @@ const mutations = {
   SET_COLOR_SWATCH (state, payload) {
     state.colorSwatch = payload
   },
+  ADD_COLOR_SWATCH (state, payload) {
+    state.colorPalettes.push(payload)
+  },
   RESET_ACTIVE_COLOR (state, payload) {
     Vue.set(state.colorPalettes[payload.index], 'color_one_active', false)
     Vue.set(state.colorPalettes[payload.index], 'color_two_active', false)
@@ -69,6 +72,16 @@ const actions = {
   */
   SET_COLOR_SWATCH (context, payload) {
     context.commit('SET_COLOR_SWATCH', payload)
+  },
+  /**
+   * ADD_COLOR_SWATCH
+   * @param {Object} context 
+   * @param {Object} payload 
+   * An action to save a color
+   * swatch
+  */
+  ADD_COLOR_SWATCH (context, payload) {
+    context.commit('ADD_COLOR_SWATCH', payload)
   },
   /**
    * SET_ACTIVE_COLOR

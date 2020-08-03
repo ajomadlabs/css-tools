@@ -9,9 +9,7 @@
             <div>
 
                 <!-- HEADER SECTION -->
-                <div
-                    @click.prevent="resetColorPicker"
-                >
+                <div>
                     
                     <!-- HEADER SECTION -->
                     <div
@@ -102,12 +100,20 @@
                     >
                         <button
                             class="md:w-5/12 bg-css-tools-black-900 w-full text-css-tools-white text-16 py-3 text-center rounded leading-normal tracking-wide"
+                            @click="addSwatch"
                         >
                             ADD SWATCH
                         </button>
                     </div>
                     <!-- END -->
-
+                    <!-- ERROR -->
+                    <p
+                        v-if="error"
+                        class="leading-normal tracking-normal text-12 text-center text-css-tools-danger font-normal my-1"
+                    >
+                        {{ error }}
+                    </p>
+                    <!-- END -->
                 </div>
                 <!-- END -->
             </div>
