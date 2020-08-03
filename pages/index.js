@@ -1,4 +1,7 @@
 export default {
+    components :{
+        addSwatchModal: () => import('@/components/add-swatch-modal/index.vue')
+    },
     data () {
         return {
             colorPalettes: []
@@ -8,6 +11,17 @@ export default {
         this.colorPalettes = this.$store.getters['swatch/getColorPalettes']
     },
     methods: {
+        /**
+         * openAddSwatchModal
+         * Method to open the add
+         * swatch modal
+        */
+        openAddSwatchModal () {
+            let payload = {
+                status: true
+            }
+            this.$nuxt.$emit('open-add-swatch-modal', payload)
+        },
         /**
          * setActiveColor
          * @param {Number} index

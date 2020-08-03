@@ -27,6 +27,7 @@
             <!-- BUTTON SECTION -->
             <button
               class="xs:hidden md:block rounded px-4 border border-solid border-css-tools-gray-100 text-center py-2 text-css-tools-black font-medium text-14 cursor-pointer"
+              @click="openAddSwatchModal"
             >
               Create swatch
             </button>
@@ -165,7 +166,8 @@
         <!-- END -->
         <!-- MOBILE ADD SWATCH BUTTON -->
         <div
-          class="xs:block md:hidden text-center rounded-full"
+          class="xs:block md:hidden text-center rounded-full cursor-pointer"
+          @click="openAddSwatchModal"
         >
           <button
             class="btn-float rounded-full text-css-tools-black font-semibold text-26 bg-css-tools-white"
@@ -177,6 +179,10 @@
         </div>
         <!-- END -->
       </div>
+      <!-- END -->
+      <!-- ADD SWATCH MODAL COMPONENT -->
+      <add-swatch-modal/>
+      <!-- END -->
     </center>
     <!-- END -->
   </div>
