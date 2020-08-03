@@ -16,9 +16,9 @@
                         class="xs:w-full mb-2"
                     >
                         <h3
-                            class="text-left leading-7 antialiased font-bold text-css-tools-black-900 xs:text-20 md:text-24"
+                            class="text-left lg:pb-1 leading-7 antialiased font-bold text-css-tools-black-900 xs:text-20 md:text-24"
                         >
-                            Add Swatch
+                            Create your Swatch
                         </h3>
                         <!-- SUB PARA SECTION -->
                         <p
