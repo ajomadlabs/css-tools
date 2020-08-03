@@ -6,10 +6,10 @@ export default {
         return {
             showModal: false,
             color: {
-                color_one: '#dbdfea',
-                color_two: '#dbdfea',
-                color_three: '#dbdfea',
-                color_four: '#dbdfea',
+                color_one: '#f8fafb',
+                color_two: '#f8fafb',
+                color_three: '#f8fafb',
+                color_four: '#f8fafb',
                 color_one_active: true,
                 color_two_active: true,
                 color_three_active: true,
