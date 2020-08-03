@@ -13,11 +13,24 @@
           class="xs:mx-8 md:mx-16 ipadPro:mx-20 lg:mx-27"
         >
           <!-- SECTION ONE -->
-          <h1
-            class="antialiased font-semibold leading-normal tracking-normal xs:text-18 md:text-24 text-left text-css-tools-black"
+          <div
+            class="md:flex md:items-center md:justify-between"
           >
-            Color Swatches
-          </h1>
+            <!-- TEXT SECTION -->
+            <h1
+              class="antialiased font-semibold leading-normal tracking-normal xs:text-18 md:text-24 text-left text-css-tools-black"
+            >
+              Color Swatches
+            </h1>
+            <!-- END -->
+            <!-- BUTTON SECTION -->
+            <button
+              class="xs:hidden md:block rounded px-4 border border-solid border-css-tools-gray-100 text-center py-2 text-css-tools-black font-medium text-14 cursor-pointer"
+            >
+              Create swatch
+            </button>
+            <!-- END -->
+          </div>
           <!-- END -->
 
           <!-- SECTION TWO -->
