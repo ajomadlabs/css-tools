@@ -49,7 +49,6 @@
                                     class="w-28 xs:h-12 sm:h-14 md:h-26 rounded-md"
                                     :style="`background-color:${colorOne}`"
                                     @click.stop="addColor(1)"
-                                    @keypress.enter="resetColorPicker"
                                 />
                                 <!-- END -->
 
@@ -58,7 +57,6 @@
                                     class="w-28 xs:h-12 sm:h-14 md:h-26 rounded-md ml-2"
                                     :style="`background-color:${colorTwo}`"
                                     @click.stop="addColor(2)"
-                                    @keypress.enter="resetColorPicker"
                                 />
                                 <!-- END -->
                             </div>
@@ -73,7 +71,6 @@
                                     class="w-28 xs:h-12 sm:h-14 md:h-26 rounded-md"
                                     :style="`background-color:${colorThree}`"
                                     @click.stop="addColor(3)"
-                                    @keypress.enter="resetColorPicker"
                                 />
                                 <!-- END -->
 
@@ -82,7 +79,6 @@
                                     class="w-28 xs:h-12 sm:h-14 md:h-26 rounded-md ml-2"
                                     :style="`background-color:${colorFour}`"
                                     @click.stop="addColor(4)"
-                                    @keypress.enter="resetColorPicker"
                                 />
                                 <!-- END -->
                             </div>

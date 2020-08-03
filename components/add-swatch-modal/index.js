@@ -16,6 +16,7 @@ export default {
         }
     },
     mounted () {
+        this.colorOne = this.colorTwo = this.colorThree = this.colorFour = "#f8fafb"
         this.$nuxt.$on('open-add-swatch-modal', (data) => {
             if (data === false) {
                 this.showModal = data
@@ -49,14 +50,18 @@ export default {
          * states
         */
         resetColorPicker () {
-            this.colorOnePicker = this.colorTwoPicker = this.colorThreePicker = this.colorFourPicker = false
+            
         }
 
     },
     beforeDestroy() {
         this.showModal = null
         delete this.showModal
-        this.colorOnePicker = this.colorTwoPicker = this.colorThreePicker = this.colorFourPicker = "#f8fafb"
+        this.colorOne = this.colorTwo = this.colorThree = this.colorFour = null
+        delete this.colorOne
+        delete this.colorTwo
+        delete this.colorThree
+        delete this.colorFour
         this.$nuxt.$off('open-add-swatch-modal', () => {})
     },
 }
