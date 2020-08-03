@@ -5,6 +5,7 @@
       class="xs:mt-28 md:mt-34"
     >
       <div
+        class="relative"
         style="max-width: 1180px"
       >
 
@@ -160,6 +161,19 @@
             <!-- END -->
           </div>
           <!-- END -->
+        </div>
+        <!-- END -->
+        <!-- MOBILE ADD SWATCH BUTTON -->
+        <div
+          class="xs:block md:hidden text-center rounded-full"
+        >
+          <button
+            class="btn-float rounded-full text-css-tools-black font-semibold text-26 bg-css-tools-white"
+          >
+            <center>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 32 32"><path d="M 15 5 L 15 15 L 5 15 L 5 17 L 15 17 L 15 27 L 17 27 L 17 17 L 27 17 L 27 15 L 17 15 L 17 5 Z"/></svg>
+            </center>
+          </button>
         </div>
         <!-- END -->
       </div>
