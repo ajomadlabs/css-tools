@@ -11,7 +11,7 @@ export default {
         customStyle: {
             required: false,
             type: String,
-            default: 'xs:px-75 md:px-10 py-75 md:w-7/12 lg:w-5/12 xl:w-4/12'
+            default: 'xs:px-75 md:px-10 py-75 md:w-8/12 lg:w-5/12 xl:w-4/12'
         }
     },
     watch: {

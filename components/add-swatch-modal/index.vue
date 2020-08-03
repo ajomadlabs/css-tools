@@ -9,7 +9,9 @@
             <div>
 
                 <!-- HEADER SECTION -->
-                <div>
+                <div
+                    @click.prevent="resetColorPicker"
+                >
                     
                     <!-- HEADER SECTION -->
                     <div
@@ -32,11 +34,11 @@
 
                     <!-- PALETTE CARD SECTION -->
                     <div
-                        class="mt-10 flex flex-wrap justify-center items-start"
+                        class="mt-10 flex md:flex-wrap gap-2 justify-between items-center"
                     >
                         <!-- PALETTE CARD -->
                         <div
-                            class="xs:w-9/12 md:w-7/12 ipadPro:w-5/12 px-4 py-6 cursor-pointer h-auto rounded-lg bg-css-tools-white shadow-md"
+                            class="xs:w-5/12 md:w-4/12 ipadPro:w-5/12 px-4 py-6 cursor-pointer h-auto rounded-lg bg-css-tools-white shadow-md"
                         >
                             <!-- FIRST ROW -->
                             <div
@@ -44,16 +46,19 @@
                             >
                                 <!-- COLOR ONE -->
                                 <div
-                                    class="w-28 xs:h-26 rounded-md"
-                                    :style="`background-color:${color.color_one}`"
+                                    class="w-28 xs:h-8 sm:h-14 md:h-26 rounded-md"
+                                    :style="`background-color:${colorOne}`"
+                                    @click.stop="addColor(1)"
+                                    @keypress.enter="resetColorPicker"
                                 />
                                 <!-- END -->
 
                                 <!-- COLOR TWO -->
                                 <div
-                                    class="w-28 xs:h-26 rounded-md ml-2"
-                                    :style="`background-color:${color.color_two}`"
-                
+                                    class="w-28 xs:h-8 sm:h-14 md:h-26 rounded-md ml-2"
+                                    :style="`background-color:${colorTwo}`"
+                                    @click.stop="addColor(2)"
+                                    @keypress.enter="resetColorPicker"
                                 />
                                 <!-- END -->
                             </div>
@@ -65,20 +70,32 @@
                             >
                                 <!-- COLOR THREE -->
                                 <div
-                                    class="w-28 xs:h-26 rounded-md"
-                                    :style="`background-color:${color.color_three}`"
+                                    class="w-28 xs:h-8 sm:h-14 md:h-26 rounded-md"
+                                    :style="`background-color:${colorThree}`"
+                                    @click.stop="addColor(3)"
+                                    @keypress.enter="resetColorPicker"
                                 />
                                 <!-- END -->
 
                                 <!-- COLOR FOUR -->
                                 <div
-                                    class="w-28 xs:h-26 rounded-md ml-2"
-                                    :style="`background-color:${color.color_four}`"
+                                    class="w-28 xs:h-8 sm:h-14 md:h-26 rounded-md ml-2"
+                                    :style="`background-color:${colorFour}`"
+                                    @click.stop="addColor(4)"
+                                    @keypress.enter="resetColorPicker"
                                 />
                                 <!-- END -->
                             </div>
                             <!-- END -->
                         </div>
+                        <!-- END -->
+                        <!-- COLOR PICKER -->
+                        <client-only>
+                            <chrome
+                                ref="COLORONE"
+                                v-model="color1"
+                            />
+                        </client-only>
                         <!-- END -->
                     </div>
                     <!-- END -->
