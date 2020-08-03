@@ -12,14 +12,7 @@ export default {
             colorTwo: '#f8fafb',
             colorThree: '#f8fafb',
             colorFour: '#f8fafb',
-            color1: '',
-            color2: '',
-            color3: '',
-            color4: '',
-            colorOnePicker: true,
-            colorTwoPicker: false,
-            colorThreePicker: false,
-            colorFourPicker: false
+            color1: ''
         }
     },
     mounted () {
@@ -41,21 +34,13 @@ export default {
         */
         addColor (section) {
             if (section === 1) {
-                // this.colorOnePicker = true
                 this.colorOne = this.color1.hex
-                // this.colorTwoPicker = this.colorThreePicker = this.colorFourPicker = false
             } else if (section === 2) {
-                // this.colorTwoPicker = true
                 this.colorTwo = this.color1.hex
-                // this.colorOnePicker = this.colorThreePicker = this.colorFourPicker = false
             } else if (section === 3) {
-                // this.colorThreePicker = true
                 this.colorThree = this.color1.hex
-                // this.colorTwoPicker = this.colorOnePicker = this.colorFourPicker = false
             } else if (section === 4) {
-                // this.colorFourPicker = true
                 this.colorFour = this.color1.hex
-                // this.colorTwoPicker = this.colorThreePicker = this.colorOnePicker = false
             }
         },
         /**

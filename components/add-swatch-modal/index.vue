@@ -26,7 +26,7 @@
                         <p
                             class="antialiased font-normal leading-normal tracking-normal text-left xs:text-12 lg:text-14 text-css-tools-gray-700"
                         >
-                            Fill your swatch with your favourite colors by clicking on each section.
+                            Fill your swatch with your favourite colors by picking a color using color picker and clicking on section which you want see the color.
                         </p>
                         <!-- END -->
                     </div>
@@ -46,7 +46,7 @@
                             >
                                 <!-- COLOR ONE -->
                                 <div
-                                    class="w-28 xs:h-8 sm:h-14 md:h-26 rounded-md"
+                                    class="w-28 xs:h-12 sm:h-14 md:h-26 rounded-md"
                                     :style="`background-color:${colorOne}`"
                                     @click.stop="addColor(1)"
                                     @keypress.enter="resetColorPicker"
@@ -55,7 +55,7 @@
 
                                 <!-- COLOR TWO -->
                                 <div
-                                    class="w-28 xs:h-8 sm:h-14 md:h-26 rounded-md ml-2"
+                                    class="w-28 xs:h-12 sm:h-14 md:h-26 rounded-md ml-2"
                                     :style="`background-color:${colorTwo}`"
                                     @click.stop="addColor(2)"
                                     @keypress.enter="resetColorPicker"
@@ -70,7 +70,7 @@
                             >
                                 <!-- COLOR THREE -->
                                 <div
-                                    class="w-28 xs:h-8 sm:h-14 md:h-26 rounded-md"
+                                    class="w-28 xs:h-12 sm:h-14 md:h-26 rounded-md"
                                     :style="`background-color:${colorThree}`"
                                     @click.stop="addColor(3)"
                                     @keypress.enter="resetColorPicker"
@@ -79,7 +79,7 @@
 
                                 <!-- COLOR FOUR -->
                                 <div
-                                    class="w-28 xs:h-8 sm:h-14 md:h-26 rounded-md ml-2"
+                                    class="w-28 xs:h-12 sm:h-14 md:h-26 rounded-md ml-2"
                                     :style="`background-color:${colorFour}`"
                                     @click.stop="addColor(4)"
                                     @keypress.enter="resetColorPicker"
