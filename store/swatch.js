@@ -70,7 +70,7 @@ const actions = {
   */
   async ADD_COLOR_SWATCH (context, payload) {
     context.commit('ADD_COLOR_SWATCH', payload)
-    console.log("New Color", JSON.stringify(payload))
+    // console.log("New Color", JSON.stringify(payload))
     try {
       const response = await this.app.apolloProvider.defaultClient.mutate({
         mutation: gql`
@@ -99,7 +99,7 @@ const actions = {
           color_four: payload.color_four
         }
       })
-      console.log("Response Mutation", JSON.stringify(response))
+      // console.log("Response Mutation", JSON.stringify(response))
     } catch (error) {
       console.log("Error", error)
     }
