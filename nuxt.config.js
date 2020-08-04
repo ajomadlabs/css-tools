@@ -56,7 +56,16 @@ export default {
   /*
   ** Nuxt.js modules
   */
-  modules: [],
+  modules: [
+    '@nuxtjs/apollo'
+  ],
+  // Apollo configs
+  apollo: {
+    errorHandler: '~/plugins/apollo-error-handler.js',
+    clientConfigs: {
+      default: '~/apollo/graphql.js'
+    }
+  },
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/

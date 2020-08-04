@@ -1,170 +1,10 @@
 // Defining the States
 import Vue from 'vue'
+import gql from 'graphql-tag'
+
 const state = () => ({
   colorSwatch: null,
-  colorPalettes: 
-  [
-    {
-        colorOne: '#383e56',
-        colorTwo: '#f69e7b',
-        colorThree: '#eedad1',
-        colorFour: '#d4d5b0',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#e4e3e3',
-        colorTwo: '#8489ac',
-        colorThree: '#3b6978',
-        colorFour: '#204051',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#ffdbc5',
-        colorTwo: '#cf1b1b',
-        colorThree: '#900d0d',
-        colorFour: '#423144',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#383e56',
-        colorTwo: '#f69e7b',
-        colorThree: '#eedad1',
-        colorFour: '#d4d5b0',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#ebecf1',
-        colorTwo: '#206a5d',
-        colorThree: '#1f4068',
-        colorFour: '#1b1c25',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#1b262c',
-        colorTwo: '#0f4c75',
-        colorThree: '#3282b8',
-        colorFour: '#bbe1fa',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#111d5e',
-        colorTwo: '#c70039',
-        colorThree: '#f37121',
-        colorFour: '#ffbd69',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#f4f6ff',
-        colorTwo: '#fbd46d',
-        colorThree: '#4f8a8b',
-        colorFour: '#07031a',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#092532',
-        colorTwo: '#89c9b8',
-        colorThree: '#c7e2b2',
-        colorFour: '#e1ffc2',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#333a7b',
-        colorTwo: '#4b6982',
-        colorThree: '#70c6c7',
-        colorFour: '#b4ffd8',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#086972',
-        colorTwo: '#01a9b4',
-        colorThree: '#87dfd6',
-        colorFour: '#fbfd8a',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#184d47',
-        colorTwo: '#96bb7c',
-        colorThree: '#d6efc7',
-        colorFour: '#eebb4d',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#fa1616',
-        colorTwo: '#12cad6',
-        colorThree: '#0fabbc',
-        colorFour: '#e4f9ff',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#1b262c',
-        colorTwo: '#0f4c75',
-        colorThree: '#3282b8',
-        colorFour: '#bbe1fa',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#24a19c',
-        colorTwo: '#6ebfb5',
-        colorThree: '#ffc7c7',
-        colorFour: '#ff5f40',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    },
-    {
-        colorOne: '#eeecda',
-        colorTwo: '#f08a5d',
-        colorThree: '#b83b5e',
-        colorFour: '#6a2c70',
-        colorOneActive: false,
-        colorTwoActive: false,
-        colorThreeActive: false,
-        colorFourActive: false
-    }
-  ]
+  colorPalettes: []
 })
 
 // Defining Mutations
@@ -172,33 +12,39 @@ const mutations = {
   SET_COLOR_SWATCH (state, payload) {
     state.colorSwatch = payload
   },
+  ADD_COLOR_SWATCH (state, payload) {
+    state.colorPalettes.push(payload)
+  },
+  SET_COLOR_PALETTES (state, payload) {
+    state.colorPalettes = payload
+  },
   RESET_ACTIVE_COLOR (state, payload) {
-    Vue.set(state.colorPalettes[payload.index], 'colorOneActive', false)
-    Vue.set(state.colorPalettes[payload.index], 'colorTwoActive', false)
-    Vue.set(state.colorPalettes[payload.index], 'colorThreeActive', false)
-    Vue.set(state.colorPalettes[payload.index], 'colorFourActive', false)
+    Vue.set(state.colorPalettes[payload.index], 'color_one_active', false)
+    Vue.set(state.colorPalettes[payload.index], 'color_two_active', false)
+    Vue.set(state.colorPalettes[payload.index], 'color_three_active', false)
+    Vue.set(state.colorPalettes[payload.index], 'color_four_active', false)
   },
   SET_ACTIVE_COLOR (state, payload) {
     if (payload.swatch === 1) {
-      Vue.set(state.colorPalettes[payload.index], 'colorOneActive', true)
-      Vue.set(state.colorPalettes[payload.index], 'colorTwoActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorThreeActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorFourActive', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_one_active', true)
+      Vue.set(state.colorPalettes[payload.index], 'color_two_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_three_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_four_active', false)
     } else if (payload.swatch === 2) {
-      Vue.set(state.colorPalettes[payload.index], 'colorOneActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorTwoActive', true)
-      Vue.set(state.colorPalettes[payload.index], 'colorThreeActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorFourActive', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_one_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_two_active', true)
+      Vue.set(state.colorPalettes[payload.index], 'color_three_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_four_active', false)
     } else if (payload.swatch === 3) {
-      Vue.set(state.colorPalettes[payload.index], 'colorOneActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorTwoActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorThreeActive', true)
+      Vue.set(state.colorPalettes[payload.index], 'color_one_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_two_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_three_active', true)
       Vue.set(state.colorPalettes[payload.index], 'colorFourActive', false)
     } else if (payload.swatch === 4) {
-      Vue.set(state.colorPalettes[payload.index], 'colorOneActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorTwoActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorThreeActive', false)
-      Vue.set(state.colorPalettes[payload.index], 'colorFourActive', true)
+      Vue.set(state.colorPalettes[payload.index], 'color_one_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_two_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_three_active', false)
+      Vue.set(state.colorPalettes[payload.index], 'color_four_active', true)
     }
   }
 }
@@ -214,6 +60,79 @@ const actions = {
   */
   SET_COLOR_SWATCH (context, payload) {
     context.commit('SET_COLOR_SWATCH', payload)
+  },
+  /**
+   * ADD_COLOR_SWATCH
+   * @param {Object} context 
+   * @param {Object} payload 
+   * An action to save a color
+   * swatch
+  */
+  async ADD_COLOR_SWATCH (context, payload) {
+    context.commit('ADD_COLOR_SWATCH', payload)
+    // console.log("New Color", JSON.stringify(payload))
+    try {
+      const response = await this.app.apolloProvider.defaultClient.mutate({
+        mutation: gql`
+          mutation addColor(
+            $color_one: String!
+            $color_two: String!
+            $color_three: String!
+            $color_four: String!
+          ){
+            insert_colors_one(
+              object: {
+                color_one: $color_one
+                color_two: $color_two
+                color_three: $color_three
+                color_four: $color_four
+            })
+            {
+              id
+            }
+          }
+        `,
+        variables: {
+          color_one: payload.color_one,
+          color_two: payload.color_two,
+          color_three: payload.color_three,
+          color_four: payload.color_four
+        }
+      })
+      // console.log("Response Mutation", JSON.stringify(response))
+    } catch (error) {
+      console.log("Error", error)
+    }
+  },
+  /**
+   * FETCH_COLORS
+   * @param {Object} context 
+   * An action to fetch all
+   * color
+  */
+  async FETCH_COLOR (context) {
+    try {
+      const response = await this.app.apolloProvider.defaultClient.query({
+        query: gql`
+          query {
+            colors {
+              color_one
+              color_two
+              color_three
+              color_four
+              color_one_active
+              color_two_active
+              color_three_active
+              color_four_active
+            }
+          }
+        `
+      })
+      // console.log("FETCH_COLOR", JSON.stringify(response.data.colors))
+      context.commit("SET_COLOR_PALETTES", response.data.colors)
+    } catch (error) {
+      console.log("Error", error)
+    }
   },
   /**
    * SET_ACTIVE_COLOR

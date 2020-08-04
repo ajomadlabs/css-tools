@@ -5,6 +5,7 @@
       class="xs:mt-28 md:mt-34"
     >
       <div
+        class="relative"
         style="max-width: 1180px"
       >
 
@@ -13,11 +14,25 @@
           class="xs:mx-8 md:mx-16 ipadPro:mx-20 lg:mx-27"
         >
           <!-- SECTION ONE -->
-          <h1
-            class="antialiased font-semibold leading-normal tracking-normal xs:text-18 md:text-24 text-left text-css-tools-black"
+          <div
+            class="md:flex md:items-center md:justify-between"
           >
-            Color Swatches
-          </h1>
+            <!-- TEXT SECTION -->
+            <h1
+              class="antialiased font-semibold leading-normal tracking-normal xs:text-18 md:text-24 text-left text-css-tools-black"
+            >
+              Color Swatches
+            </h1>
+            <!-- END -->
+            <!-- BUTTON SECTION -->
+            <button
+              class="xs:hidden md:block rounded px-4 border border-solid border-css-tools-gray-100 text-center py-2 text-css-tools-black font-medium text-14 cursor-pointer"
+              @click="openAddSwatchModal"
+            >
+              Create swatch
+            </button>
+            <!-- END -->
+          </div>
           <!-- END -->
 
           <!-- SECTION TWO -->
@@ -48,18 +63,18 @@
               <!-- COLOR ONE -->
               <div
                 class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md"
-                :style="`background-color:${color.colorOne}`"
+                :style="`background-color:${color.color_one}`"
                 @mouseover="setActiveColor(i, 1)"
                 @mouseleave="resetColor(i)"
               >
                 <div
-                  v-show="color.colorOneActive"
+                  v-show="color.color_one_active"
                   class="bg-css-tools-black opacity-50 rounded-t-lg"
                 >
                   <h3
                     class="text-center antialiased leading-normal tracking-normal text-css-tools-white"
                   >
-                    {{ color.colorOne }}
+                    {{ color.color_one }}
                   </h3>
                 </div>
               </div>
@@ -68,18 +83,18 @@
               <!-- COLOR TWO -->
               <div
                 class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md ml-2"
-                :style="`background-color:${color.colorTwo}`"
+                :style="`background-color:${color.color_two}`"
                 @mouseover="setActiveColor(i, 2)"
                 @mouseleave="resetColor(i)"
               >
                 <div
-                  v-show="color.colorTwoActive"
+                  v-show="color.color_two_active"
                   class="bg-css-tools-black opacity-50 rounded-t-lg"
                 >
                   <h3
                     class="text-center antialiased leading-normal tracking-normal text-css-tools-white"
                   >
-                    {{ color.colorTwo }}
+                    {{ color.color_two }}
                   </h3>
                 </div>
               </div>
@@ -94,18 +109,18 @@
               <!-- COLOR THREE -->
               <div
                 class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md"
-                :style="`background-color:${color.colorThree}`"
+                :style="`background-color:${color.color_three}`"
                 @mouseover="setActiveColor(i, 3)"
                 @mouseleave="resetColor(i)"
               >
                 <div
-                  v-if="color.colorThreeActive"
+                  v-if="color.color_three_active"
                   class="bg-css-tools-black opacity-50 rounded-t-lg"
                 >
                   <h3
                     class="text-center antialiased leading-normal tracking-normal text-css-tools-white"
                   >
-                    {{ color.colorThree }}
+                    {{ color.color_three }}
                   </h3>
                 </div>
               </div>
@@ -114,18 +129,18 @@
               <!-- COLOR FOUR -->
               <div
                 class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md ml-2"
-                :style="`background-color:${color.colorFour}`"
+                :style="`background-color:${color.color_four}`"
                 @mouseover="setActiveColor(i, 4)"
                 @mouseleave="resetColor(i)"
               >
                 <div
-                  v-show="color.colorFourActive"
+                  v-show="color.color_four_active"
                   class="bg-css-tools-black opacity-50 rounded-t-lg"
                 >
                   <h3
                     class="text-center antialiased leading-normal tracking-normal text-css-tools-white"
                   >
-                    {{ color.colorFour }}
+                    {{ color.color_four }}
                   </h3>
                 </div>
               </div>
@@ -149,7 +164,25 @@
           <!-- END -->
         </div>
         <!-- END -->
+        <!-- MOBILE ADD SWATCH BUTTON -->
+        <div
+          class="xs:block md:hidden text-center rounded-full cursor-pointer"
+          @click="openAddSwatchModal"
+        >
+          <button
+            class="btn-float rounded-full text-css-tools-black font-semibold text-26 bg-css-tools-white"
+          >
+            <center>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 32 32"><path d="M 15 5 L 15 15 L 5 15 L 5 17 L 15 17 L 15 27 L 17 27 L 17 17 L 27 17 L 27 15 L 17 15 L 17 5 Z"/></svg>
+            </center>
+          </button>
+        </div>
+        <!-- END -->
       </div>
+      <!-- END -->
+      <!-- ADD SWATCH MODAL COMPONENT -->
+      <add-swatch-modal/>
+      <!-- END -->
     </center>
     <!-- END -->
   </div>

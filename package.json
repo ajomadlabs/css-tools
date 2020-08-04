@@ -10,9 +10,12 @@
     "serve": "nuxt serve"
   },
   "dependencies": {
+    "@nuxtjs/apollo": "^4.0.1-rc.1",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "graphql-tag": "^2.11.0",
     "nuxt": "^2.13.0",
-    "tinycolor2": "^1.4.1"
+    "tinycolor2": "^1.4.1",
+    "vue-color": "^2.7.1"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^2.0.0"

@@ -1,13 +1,36 @@
 export default {
+    components :{
+        addSwatchModal: () => import('@/components/add-swatch-modal/index.vue')
+    },
     data () {
         return {
             colorPalettes: []
         }
     },
     mounted () {
-        this.colorPalettes = this.$store.getters['swatch/getColorPalettes']
+        this.fetchColorPalettes()
     },
     methods: {
+        /**
+         * fetchColorPalettes
+         * Method to fetch the color
+         * Palettes from the store 
+        */
+        async fetchColorPalettes () {
+            await this.$store.dispatch('swatch/FETCH_COLOR')
+            this.colorPalettes = this.$store.getters['swatch/getColorPalettes']
+        },
+        /**
+         * openAddSwatchModal
+         * Method to open the add
+         * swatch modal
+        */
+        openAddSwatchModal () {
+            let payload = {
+                status: true
+            }
+            this.$nuxt.$emit('open-add-swatch-modal', payload)
+        },
         /**
          * setActiveColor
          * @param {Number} index
@@ -42,10 +65,10 @@ export default {
         */
         goTo (index) {
             let payload = {
-                colorOne: this.colorPalettes[index].colorOne,
-                colorTwo: this.colorPalettes[index].colorTwo,
-                colorThree: this.colorPalettes[index].colorThree,
-                colorFour: this.colorPalettes[index].colorFour
+                colorOne: this.colorPalettes[index].color_one,
+                colorTwo: this.colorPalettes[index].color_two,
+                colorThree: this.colorPalettes[index].color_three,
+                colorFour: this.colorPalettes[index].color_four
             }
             this.$store.dispatch("swatch/SET_COLOR_SWATCH", payload)
             this.$router.push(`/color-swatch/${index + 1}`)
