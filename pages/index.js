@@ -8,9 +8,18 @@ export default {
         }
     },
     mounted () {
-        this.colorPalettes = this.$store.getters['swatch/getColorPalettes']
+        this.fetchColorPalettes()
     },
     methods: {
+        /**
+         * fetchColorPalettes
+         * Method to fetch the color
+         * Palettes from the store 
+        */
+        async fetchColorPalettes () {
+            await this.$store.dispatch('swatch/FETCH_COLOR')
+            this.colorPalettes = this.$store.getters['swatch/getColorPalettes']
+        },
         /**
          * openAddSwatchModal
          * Method to open the add
