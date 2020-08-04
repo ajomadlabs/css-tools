@@ -4,6 +4,7 @@
         <v-modal
             :active="showModal"
             event-name="open-add-swatch-modal"
+            custom-style="xs:px-75 md:px-10 py-75 md:w-8/12 lg:w-5/12 xl:w-4/12"
         >
             <!-- SWATCH CARD SECTION -->
             <div>
