@@ -68,8 +68,41 @@ const actions = {
    * An action to save a color
    * swatch
   */
-  ADD_COLOR_SWATCH (context, payload) {
+  async ADD_COLOR_SWATCH (context, payload) {
     context.commit('ADD_COLOR_SWATCH', payload)
+    console.log("New Color", JSON.stringify(payload))
+    try {
+      const response = await this.app.apolloProvider.defaultClient.mutate({
+        mutation: gql`
+          mutation addColor(
+            $color_one: String!
+            $color_two: String!
+            $color_three: String!
+            $color_four: String!
+          ){
+            insert_colors_one(
+              object: {
+                color_one: $color_one
+                color_two: $color_two
+                color_three: $color_three
+                color_four: $color_four
+            })
+            {
+              id
+            }
+          }
+        `,
+        variables: {
+          color_one: payload.color_one,
+          color_two: payload.color_two,
+          color_three: payload.color_three,
+          color_four: payload.color_four
+        }
+      })
+      console.log("Response Mutation", JSON.stringify(response))
+    } catch (error) {
+      console.log("Error", error)
+    }
   },
   /**
    * FETCH_COLORS
