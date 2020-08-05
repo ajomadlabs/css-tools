@@ -1,10 +1,12 @@
 export default {
     components :{
-        addSwatchModal: () => import('@/components/add-swatch-modal/index.vue')
+        addSwatchModal: () => import('@/components/add-swatch-modal/index.vue'),
+        swatchLoader: () => import('@/components/color-swatch-loader/index.vue')
     },
     data () {
         return {
-            colorPalettes: []
+            colorPalettes: [],
+            loading: true
         }
     },
     mounted () {
@@ -17,8 +19,10 @@ export default {
          * Palettes from the store 
         */
         async fetchColorPalettes () {
+            this.loading = true
             await this.$store.dispatch('swatch/FETCH_COLOR')
             this.colorPalettes = this.$store.getters['swatch/getColorPalettes']
+            this.loading = false
         },
         /**
          * openAddSwatchModal
