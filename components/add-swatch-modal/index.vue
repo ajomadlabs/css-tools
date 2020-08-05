@@ -100,10 +100,17 @@
                         class="mt-6"
                     >
                         <button
+                            v-if="!buttonLoading"
                             class="md:w-5/12 bg-css-tools-black-900 w-full text-css-tools-white text-16 py-3 text-center rounded leading-normal tracking-wide"
                             @click="addSwatch"
                         >
                             ADD SWATCH
+                        </button>
+                        <button
+                            v-if="buttonLoading"
+                            class="md:w-5/12 bg-css-tools-gray-100 w-full text-css-tools-gray-200 text-16 py-3 text-center rounded leading-normal tracking-wide"
+                        >
+                            ADDING SWATCH
                         </button>
                     </div>
                     <!-- END -->
@@ -133,6 +140,7 @@ export default {
     },
     data () {
         return {
+            buttonLoading: false,
             showModal: false,
             colorOne: '#f8fafb',
             colorTwo: '#f8fafb',
@@ -177,6 +185,7 @@ export default {
          * Method to save the swatch
         */
         addSwatch () {
+            this.buttonLoading = true
             this.error = ""
             if (this.colorOne !== "#f8fafb" && this.colorTwo !== "#f8fafb" && this.colorThree !== "#f8fafb" && this.colorFour !== "#f8fafb") {
                 let payload = {
@@ -191,10 +200,12 @@ export default {
                 }
                 this.$store.dispatch("swatch/ADD_COLOR_SWATCH", payload).then(() => {
                     this.colorOne = this.colorTwo = this.colorThree = this.colorFour = "#f8fafb"
+                    this.buttonLoading = false
                     this.$nuxt.$emit('open-add-swatch-modal', false)
                 })
             } else {
                 this.error = "Please make sure you have added colors to all the sections"
+                this.buttonLoading = false
             }
         }
 
