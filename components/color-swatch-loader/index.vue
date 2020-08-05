@@ -16,14 +16,14 @@
                 >
                     <!-- COLOR ONE -->
                     <div
-                        class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md"
+                        class="animate w-28 xs:h-12 sm:h-16 md:h-26 rounded-md"
                         :style="`background-color:#f8fafb`"
                     />
                     <!-- END -->
 
                     <!-- COLOR TWO -->
                     <div
-                        class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md ml-2"
+                        class="animate w-28 xs:h-12 sm:h-16 md:h-26 rounded-md ml-2"
                         :style="`background-color:#f8fafb`"
                     />
                     <!-- END -->
@@ -36,14 +36,14 @@
                 >
                     <!-- COLOR THREE -->
                     <div
-                        class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md"
+                        class="animate w-28 xs:h-12 sm:h-16 md:h-26 rounded-md"
                         :style="`background-color:#f8fafb`"
                     />
                     <!-- END -->
 
                     <!-- COLOR FOUR -->
                     <div
-                        class="w-28 xs:h-12 sm:h-16 md:h-26 rounded-md ml-2"
+                        class="animate w-28 xs:h-12 sm:h-16 md:h-26 rounded-md ml-2"
                         :style="`background-color:#f8fafb`"
                     />
                     <!-- END -->
@@ -55,7 +55,22 @@
         <!-- END -->
     </div>
 </template>
+<style scoped>
+.animate {
+    animation : shimmer 2s infinite linear;
+    background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+    background-size: 1000px 100%;
+}
 
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+</style>
 <script>
 export default {
     props: {
