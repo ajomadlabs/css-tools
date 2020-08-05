@@ -47,6 +47,7 @@
 
         <!-- PALETTE CONTAINER -->
         <div
+          v-if="loading == false"
           class="mt-10 flex flex-wrap justify-center items-start"
         >
           <!-- PALETTE CARD -->
@@ -177,6 +178,11 @@
             </center>
           </button>
         </div>
+        <!-- END -->
+        <!-- SWATCH LOADER COMPONENT -->
+        <swatch-loader
+          v-if="loading"
+        />
         <!-- END -->
       </div>
       <!-- END -->
