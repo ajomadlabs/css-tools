@@ -148,19 +148,6 @@
               <!-- END -->
             </div>
             <!-- END -->
-            <!-- THIRD ROW -->
-            <div
-              class="mt-4"
-            >
-              <!-- PALETTE NAME -->
-              <h3
-                class="antialiased font-medium leading-normal tracking-normal text-center xs:text-12 md:text-16 text-css-tools-gray-dark"
-              >
-                Color Swatch <br> #{{i + 1}}
-              </h3>
-              <!-- END -->
-            </div>
-            <!-- END -->
           </div>
           <!-- END -->
         </div>
