@@ -26,6 +26,10 @@ export default {
       { rel: 'stylesheet', type: 'text/css', href: "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"}
     ]
   },
+  server: {
+    port: 8085, // default: 3000
+    host: '0.0.0.0' // default: localhost
+  },
   /*
   ** Global CSS
   */
