@@ -181,13 +181,24 @@ export default {
             }
         },
         /**
+         * validateSwatch
+         * Method to validate if the
+         * swatch is not a black or white
+         * color 
+        */
+        validateSwatch () {
+            if ((this.colorOne !== "#ffffff" && this.colorOne !== "#000000" && this.colorOne !== "#f8fafb") && (this.colorTwo !== "#ffffff" && this.colorTwo !== "#000000" && this.colorTwo !== "#f8fafb") && (this.colorThree !== "#ffffff" && this.colorThree !== "#000000" && this.colorThree !== "#f8fafb") && (this.colorFour !== "#ffffff" && this.colorFour !== "#0000000" && this.colorFour !== "#f8fafb")) {
+                return true
+            }
+        },
+        /**
          * addSwatch
          * Method to save the swatch
         */
         addSwatch () {
             this.buttonLoading = true
             this.error = ""
-            if (this.colorOne !== "#f8fafb" && this.colorTwo !== "#f8fafb" && this.colorThree !== "#f8fafb" && this.colorFour !== "#f8fafb") {
+            if (this.validateSwatch()) {
                 let payload = {
                     color_one: this.colorOne,
                     color_two: this.colorTwo,
@@ -204,7 +215,7 @@ export default {
                     this.$nuxt.$emit('open-add-swatch-modal', false)
                 })
             } else {
-                this.error = "Please make sure you have added colors to all the sections"
+                this.error = "Please make sure all the four sections are not filled with black or white colors and have not left any section incomplete"
                 this.buttonLoading = false
             }
         }
