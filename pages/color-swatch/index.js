@@ -1,6 +1,7 @@
 export default {
     data () {
         return {
+            showMiniSwatch: false,
             swatchNumber: '',
             colorSwatch: {},
             hexValue: '',

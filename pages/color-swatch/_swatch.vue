@@ -540,6 +540,70 @@
           <!-- END -->
         </div>
         <!-- END -->
+        <!-- PALETTE FAB -->
+        <div
+          v-show="!showMiniSwatch"
+          class="xs:block md:hidden text-center rounded-full cursor-pointer"
+        >
+          <button
+            class="btn-float rounded-full text-css-tools-black font-semibold text-26 bg-css-tools-white"
+            @click="showMiniSwatch=!showMiniSwatch"
+          >
+            <h1
+              class="text-12 font-medium leading-normal tracking-normal text-css-tools-black"
+            >
+              MS
+            </h1>
+          </button>
+        </div>
+        <div
+          v-show="showMiniSwatch"
+          class="xs:block lg:hidden text-center rounded-full cursor-pointer"
+        >
+          <div
+            class="btn-float-palette rounded-lg bg-css-tools-white"
+          >
+            <!-- HEADER SECTION -->
+            <div
+              class="flex items-center justify-between"
+            >
+              <h1
+                class="pl-2 pt-2 text-left text-10 font-normal text-css-tools-black leading-normal tracking-normal"
+              >
+                Mini Swatch
+              </h1>
+              <div
+                class="pr-2 pt-2 cursor-pointer"
+                @click="showMiniSwatch=!showMiniSwatch"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 32 32"><path d="M 4.21875 10.78125 L 2.78125 12.21875 L 15.28125 24.71875 L 16 25.40625 L 16.71875 24.71875 L 29.21875 12.21875 L 27.78125 10.78125 L 16 22.5625 Z"/></svg>
+              </div>
+            </div>
+            <!-- END -->
+            <div
+              class="flex flex-wrap w-full items-center"
+            >
+              <!-- COLOR SECTION -->
+              <div
+                v-for="(item, i) in colorSwatch"
+                :key="i"
+              >
+                <!-- COLOR -->
+                <div
+                  class="mt-2 w-12 h-12 rounded cursor-pointer"
+                  :class="[i !== 0 ? 'ml-2' : 'ml-0']"
+                  :style="`background-color:${item}`"
+                  @mouseover="viewColorInfo(item)"
+                  @click="viewColorInfo(item)"
+                />
+                <!-- END -->
+              </div>
+              <!-- END -->
+            </div>
+            <!-- END -->
+          </div>
+        </div>
+        <!-- END -->
       </div>
     </center>
     <!-- END -->
