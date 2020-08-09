@@ -5,4 +5,7 @@
     .btn-float {
         @apply .fixed !important .shadow-lg !important .w-12 !important .h-12 !important .z-50 !important .bottom-8 !important .right-21 !important;
     }
+    .btn-float-palette {
+        @apply .fixed !important .shadow-lg !important .w-30 !important .h-34 !important .z-50 !important .bottom-8 !important .right-21 !important;
+    }
 }
