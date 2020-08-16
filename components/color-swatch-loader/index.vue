@@ -8,7 +8,8 @@
             <div
                 v-for="i in swatchNumber"
                 :key="i"
-                class="xs:w-5/12 md:w-1/5 xs:ml-2 md:ml-4 px-4 py-6 cursor-pointer mb-8 h-auto rounded-lg bg-css-tools-white shadow-md"
+                class="xs:w-5/12 md:w-1/5 xs:ml-2 md:ml-4 px-4 py-6 cursor-pointer mb-8 h-auto rounded-lg shadow-md"
+                :class="cardColor"
             >
                 <!-- FIRST ROW -->
                 <div
@@ -77,6 +78,20 @@ export default {
         swatchNumber: {
             type: Number,
             default: 20
+        }
+    },
+    computed: {
+        /**
+         * cardColor
+         * Method to change the
+         * card color
+        */
+        cardColor () {
+            if (this.$colorMode.preference === 'light') {
+                return 'bg-white'
+            } else {
+                return 'bg-gray-900'
+            }
         }
     }
 }
