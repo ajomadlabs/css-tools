@@ -14,7 +14,7 @@
         >
           <!-- SECTION ONE -->
           <h1
-            class="antialiased font-semibold leading-normal tracking-normal text-24 text-left text-css-tools-black"
+            class="antialiased font-semibold leading-normal tracking-normal text-24 text-left"
           >
             Color Swatch {{ swatchNumber }}
           </h1>
@@ -22,7 +22,7 @@
 
           <!-- SECTION TWO -->
           <p
-            class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+            class="antialiased font-normal leading-normal tracking-normal text-left text-14"
           >
             Let this swatch be the very next one you choose for your upcoming project.
           </p>
@@ -48,7 +48,7 @@
               <!-- COLOR CODE -->
               <div>
                 <h3
-                  class="mt-2 text-css-tools-black-900 font-medium text-16 text-center antialiased leading-normal tracking-normal text-center"
+                  class="mt-2 font-medium text-16 text-center antialiased leading-normal tracking-normal text-center"
                   :style="`color: ${item}`"
                 >
                   {{ item }}
@@ -76,7 +76,7 @@
 
             <!-- SUB HEADER SECTION -->
             <p
-              class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+              class="antialiased font-normal leading-normal tracking-normal text-left text-14"
             >
               An in-depth overview of this color swatch which mainly includes light, dark etc
             </p>
@@ -88,7 +88,7 @@
             >
               <!-- HEADER SECTION -->
               <h1
-                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium"
               >
                 Color Formats
               </h1>
@@ -136,7 +136,7 @@
             >
               <!-- HEADER SECTION -->
               <h1
-                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium"
               >
                 Light Shades
               </h1>
@@ -162,7 +162,7 @@
                     v-if="color.name !== '#ffffff'"
                   >
                     <h3
-                      class="mt-2 ml-2 text-css-tools-black text-css-tools-black-900 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
+                      class="mt-2 ml-2 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
                     >
                       {{ color.name }}
                     </h3>
@@ -178,7 +178,7 @@
             >
               <!-- HEADER SECTION -->
               <h1
-                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium"
               >
                 Dark Shades
               </h1>
@@ -204,7 +204,7 @@
                     v-if="color.name !== '#000000'"
                   >
                     <h3
-                      class="mt-2 ml-2 text-css-tools-black text-css-tools-black-900 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
+                      class="mt-2 ml-2 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
                     >
                       {{ color.name }}
                     </h3>
@@ -220,14 +220,14 @@
             >
               <!-- HEADER SECTION -->
               <h1
-                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium"
               >
                 Saturate Shades
               </h1>
               <!-- END -->
               <!-- SUB HEADER SECTION -->
               <p
-                class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+                class="antialiased font-normal leading-normal tracking-normal text-left text-14"
               >
                 Saturation is the strength of a surface colour, its degree of visual difference from neutral grey.
               </p>
@@ -250,7 +250,7 @@
                   <!-- COLOR CODE -->
                   <div>
                     <h3
-                      class="mt-2 ml-2 text-css-tools-black text-css-tools-black-900 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
+                      class="mt-2 ml-2 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
                     >
                       {{ color.name }}
                     </h3>
@@ -266,14 +266,14 @@
             >
               <!-- HEADER SECTION -->
               <h1
-                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium"
               >
                 Desaturate Shades
               </h1>
               <!-- END -->
               <!-- SUB HEADER SECTION -->
               <p
-                class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+                class="antialiased font-normal leading-normal tracking-normal text-left text-14"
               >
                 Desaturation is the weakness of a surface colour, its degree of visual difference from neutral grey.
               </p>
@@ -296,7 +296,7 @@
                   <!-- COLOR CODE -->
                   <div>
                     <h3
-                      class="mt-2 ml-2 text-css-tools-black text-css-tools-black-900 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
+                      class="mt-2 ml-2 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
                     >
                       {{ color.name }}
                     </h3>
@@ -312,14 +312,14 @@
             >
               <!-- HEADER SECTION -->
               <h1
-                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium"
               >
                 Analogous
               </h1>
               <!-- END -->
               <!-- SUB HEADER SECTION -->
               <p
-                class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+                class="antialiased font-normal leading-normal tracking-normal text-left text-14"
               >
                 Groups of three colours that are next to each other on the colour wheel.
               </p>
@@ -342,7 +342,7 @@
                   <!-- COLOR CODE -->
                   <div>
                     <h3
-                      class="mt-2 ml-2 text-css-tools-black text-css-tools-black-900 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
+                      class="mt-2 ml-2 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
                     >
                       {{ color.name }}
                     </h3>
@@ -358,14 +358,14 @@
             >
               <!-- HEADER SECTION -->
               <h1
-                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium"
               >
                 Monochromatic
               </h1>
               <!-- END -->
               <!-- SUB HEADER SECTION -->
               <p
-                class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+                class="antialiased font-normal leading-normal tracking-normal text-left text-14"
               >
                 Color schemes are derived from a single base hue and extended using its shades, tones and tints.
               </p>
@@ -388,7 +388,7 @@
                   <!-- COLOR CODE -->
                   <div>
                     <h3
-                      class="mt-2 ml-2 text-css-tools-black text-css-tools-black-900 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
+                      class="mt-2 ml-2 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
                     >
                       {{ color.name }}
                     </h3>
@@ -404,14 +404,14 @@
             >
               <!-- HEADER SECTION -->
               <h1
-                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium"
               >
                 Split Complement
               </h1>
               <!-- END -->
               <!-- SUB HEADER SECTION -->
               <p
-                class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+                class="antialiased font-normal leading-normal tracking-normal text-left text-14"
               >
                 Color scheme using one base color and two secondary colors.
               </p>
@@ -434,7 +434,7 @@
                   <!-- COLOR CODE -->
                   <div>
                     <h3
-                      class="mt-2 ml-2 text-css-tools-black text-css-tools-black-900 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
+                      class="mt-2 ml-2 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
                     >
                       {{ color.name }}
                     </h3>
@@ -450,14 +450,14 @@
             >
               <!-- HEADER SECTION -->
               <h1
-                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium"
               >
                 Triads
               </h1>
               <!-- END -->
               <!-- SUB HEADER SECTION -->
               <p
-                class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+                class="antialiased font-normal leading-normal tracking-normal text-left text-14"
               >
                 All three colors are distributed evenly around the color wheel, causing no clear dominance of one color.
               </p>
@@ -480,7 +480,7 @@
                   <!-- COLOR CODE -->
                   <div>
                     <h3
-                      class="mt-2 ml-2 text-css-tools-black text-css-tools-black-900 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
+                      class="mt-2 ml-2 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
                     >
                       {{ color.name }}
                     </h3>
@@ -496,14 +496,14 @@
             >
               <!-- HEADER SECTION -->
               <h1
-                class="antialiased text-left leading-normal tracking-normal text-18 font-medium text-css-tools-black"
+                class="antialiased text-left leading-normal tracking-normal text-18 font-medium"
               >
                 Tetrad
               </h1>
               <!-- END -->
               <!-- SUB HEADER SECTION -->
               <p
-                class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+                class="antialiased font-normal leading-normal tracking-normal text-left text-14"
               >
                 All four colors are distributed evenly around the color wheel, causing no clear dominance of one color.
               </p>
@@ -526,7 +526,7 @@
                   <!-- COLOR CODE -->
                   <div>
                     <h3
-                      class="mt-2 ml-2 text-css-tools-black text-css-tools-black-900 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
+                      class="mt-2 ml-2 font-medium text-14 text-center antialiased leading-normal tracking-normal text-center"
                     >
                       {{ color.name }}
                     </h3>
@@ -546,11 +546,12 @@
           class="xs:block md:hidden text-center rounded-full cursor-pointer"
         >
           <button
-            class="btn-float rounded-full text-css-tools-black font-semibold text-26 bg-css-tools-white"
+            class="btn-float rounded-full font-semibold shadow-xl text-26"
+            :class="cardColor"
             @click="showMiniSwatch=!showMiniSwatch"
           >
             <h1
-              class="text-12 font-medium leading-normal tracking-normal text-css-tools-black"
+              class="text-12 font-medium leading-normal tracking-normal"
             >
               MS
             </h1>
@@ -561,14 +562,15 @@
           class="xs:block lg:hidden text-center rounded-full cursor-pointer"
         >
           <div
-            class="btn-float-palette rounded-lg bg-css-tools-white"
+            class="btn-float-palette rounded-lg"
+            :class="cardColor"
           >
             <!-- HEADER SECTION -->
             <div
               class="flex items-center justify-between"
             >
               <h1
-                class="pl-2 pt-2 text-left text-10 font-normal text-css-tools-black leading-normal tracking-normal"
+                class="pl-2 pt-2 text-left text-10 font-normal leading-normal tracking-normal"
               >
                 Mini Swatch
               </h1>
@@ -576,7 +578,7 @@
                 class="pr-2 pt-2 cursor-pointer"
                 @click="showMiniSwatch=!showMiniSwatch"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 32 32"><path d="M 4.21875 10.78125 L 2.78125 12.21875 L 15.28125 24.71875 L 16 25.40625 L 16.71875 24.71875 L 29.21875 12.21875 L 27.78125 10.78125 L 16 22.5625 Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 32 32"><path d="M 4.21875 10.78125 L 2.78125 12.21875 L 15.28125 24.71875 L 16 25.40625 L 16.71875 24.71875 L 29.21875 12.21875 L 27.78125 10.78125 L 16 22.5625 Z"/></svg>
               </div>
             </div>
             <!-- END -->

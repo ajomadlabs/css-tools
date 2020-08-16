@@ -30,6 +30,15 @@ export default {
             this.viewColorInfo(this.colorSwatch.color_one)
         }
     },
+    computed: {
+        cardColor () {
+            if (this.$colorMode.preference === 'light') {
+                return 'bg-white'
+            } else {
+                return 'bg-gray-900'
+            }
+        }
+    },
     methods: {
         /**
          * resetColor

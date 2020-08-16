@@ -17,13 +17,13 @@
                         class="xs:w-full mb-2"
                     >
                         <h3
-                            class="text-left lg:pb-1 leading-7 antialiased font-bold text-css-tools-black-900 xs:text-20 md:text-24"
+                            class="text-left lg:pb-1 leading-7 antialiased font-bold xs:text-20 md:text-24"
                         >
                             Create your Swatch
                         </h3>
                         <!-- SUB PARA SECTION -->
                         <p
-                            class="antialiased font-normal leading-normal tracking-normal text-left xs:text-12 lg:text-14 text-css-tools-gray-700"
+                            class="antialiased font-normal leading-normal tracking-normal text-left xs:text-12 lg:text-14"
                         >
                             Fill your swatch with your favourite colors by picking a color using color picker and clicking on section which you want see the color.
                         </p>
@@ -37,7 +37,8 @@
                     >
                         <!-- PALETTE CARD -->
                         <div
-                            class="xs:w-5/12 md:w-4/12 ipadPro:w-5/12 px-4 py-6 cursor-pointer h-auto rounded-lg bg-css-tools-white shadow-md"
+                            class="xs:w-5/12 md:w-4/12 ipadPro:w-5/12 px-4 py-6 cursor-pointer h-auto rounded-lg shadow-md"
+                            :class="cardColor"
                         >
                             <!-- FIRST ROW -->
                             <div
@@ -159,6 +160,15 @@ export default {
                 this.showModal = data.status
             }
         })
+    },
+    computed: {
+        cardColor () {
+            if (this.$colorMode.preference === 'light') {
+                return 'bg-white'
+            } else {
+                return 'bg-gray-900'
+            }
+        }
     },
     methods: {
         /**
