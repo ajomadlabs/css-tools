@@ -19,14 +19,14 @@
           >
             <!-- TEXT SECTION -->
             <h1
-              class="antialiased font-semibold leading-normal tracking-normal xs:text-18 md:text-24 text-left text-css-tools-black"
+              class="antialiased font-semibold leading-normal tracking-normal xs:text-18 md:text-24 text-left"
             >
               Color Swatches
             </h1>
             <!-- END -->
             <!-- BUTTON SECTION -->
             <button
-              class="xs:hidden md:block rounded px-4 border border-solid border-css-tools-gray-100 text-center py-2 text-css-tools-black font-medium text-14 cursor-pointer"
+              class="xs:hidden md:block rounded px-4 border border-solid border-css-tools-gray-100 text-center py-2 font-medium text-14 cursor-pointer"
               @click="openAddSwatchModal"
             >
               Create swatch
@@ -37,7 +37,7 @@
 
           <!-- SECTION TWO -->
           <p
-            class="antialiased font-normal leading-normal tracking-normal text-left text-14 text-css-tools-gray-700"
+            class="antialiased font-normal leading-normal tracking-normal text-left text-14"
           >
             Choose your favourite colors with ease for your next project.
           </p>
@@ -54,7 +54,8 @@
           <div
             v-for="(color, i) in colorPalettes"
             :key="i"
-            class="xs:w-5/12 md:w-1/5 xs:ml-2 md:ml-4 px-4 py-6 cursor-pointer mb-8 h-auto rounded-lg bg-css-tools-white shadow-md"
+            class="xs:w-5/12 md:w-1/5 xs:ml-2 md:ml-4 px-4 py-6 cursor-pointer mb-8 h-auto rounded-lg shadow-md"
+            :class="cardColor"
             @click="goTo(i)"
           >
             <!-- FIRST ROW -->
@@ -158,10 +159,11 @@
           @click="openAddSwatchModal"
         >
           <button
-            class="btn-float rounded-full text-css-tools-black font-semibold text-26 bg-css-tools-white"
+            class="btn-float rounded-full font-semibold text-26"
+            :class="cardColor"
           >
             <center>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 32 32"><path d="M 15 5 L 15 15 L 5 15 L 5 17 L 15 17 L 15 27 L 17 27 L 17 17 L 27 17 L 27 15 L 17 15 L 17 5 Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 32 32"><path d="M 15 5 L 15 15 L 5 15 L 5 17 L 15 17 L 15 27 L 17 27 L 17 17 L 27 17 L 27 15 L 17 15 L 17 5 Z"/></svg>
             </center>
           </button>
         </div>

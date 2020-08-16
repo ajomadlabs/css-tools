@@ -12,6 +12,20 @@ export default {
     mounted () {
         this.fetchColorPalettes()
     },
+    computed: {
+        /**
+         * cardColor
+         * Method to change the
+         * card color
+        */
+        cardColor () {
+            if (this.$colorMode.preference === 'light') {
+                return 'bg-white'
+            } else {
+                return 'bg-gray-900'
+            }
+        }
+    },
     methods: {
         /**
          * fetchColorPalettes

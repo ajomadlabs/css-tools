@@ -14,7 +14,8 @@
                 
             <!-- MAIN SECTION -->
             <div
-                class="xs:px-75 md:px-10 py-75 md:w-8/12 lg:w-5/12 xl:w-4/12 xs:fixed xs:bottom-0 nexus:relative xs:w-full xs:mx-0 lg:mx-0 bg-white shadow-lg xs:rounded-t-10 nexus:rounded-10 md:min-h-64 md:overflow-hidden"
+                class="xs:px-75 md:px-10 py-75 md:w-8/12 lg:w-5/12 xl:w-4/12 xs:fixed xs:bottom-0 nexus:relative xs:w-full xs:mx-0 lg:mx-0 shadow-lg xs:rounded-t-10 nexus:rounded-10 md:min-h-64 md:overflow-hidden"
+                :class="cardColor"
             >
 
                 <!-- CONTENT -->
@@ -54,6 +55,15 @@ export default {
                 return document.querySelector('body').classList.add('overflow-hidden');
             }
             document.querySelector('body').classList.remove('overflow-hidden');
+        }
+    },
+    computed: {
+        cardColor () {
+            if (this.$colorMode.preference === 'light') {
+                return 'bg-white'
+            } else {
+                return 'bg-gray-900'
+            }
         }
     },
     methods: {
